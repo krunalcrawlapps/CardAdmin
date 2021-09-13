@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1056553279825",
+    "project_id": "cardsm-a2f42",
+    "storage_bucket": "cardsm-a2f42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056553279825:android:d346c5f2317ade13053370",
+        "android_client_info": {
+          "package_name": "com.abs.cardadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1056553279825-5krjv0ujojkngbrd2p5tmkd56urjk4jn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlLrKKd0dCfIlCFmLSWU9QV9Zjqxp1ybk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1056553279825-5krjv0ujojkngbrd2p5tmkd56urjk4jn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1056553279825-527hcopms4tpg428ka6rsafft4cq6jqn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.abs.cardsadmin"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

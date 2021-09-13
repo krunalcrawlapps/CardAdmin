@@ -1,0 +1,10 @@
+#Mon Sep 13 16:49:08 IST 2021
+base.2=/Volumes/Data-Storage/Flutter/card_app_flutter/card_app_admin/build/app/intermediates/dex/debug/mergeDexDebug/classes3.dex
+path.2=classes3.dex
+base.1=/Volumes/Data-Storage/Flutter/card_app_flutter/card_app_admin/build/app/intermediates/dex/debug/mergeDexDebug/classes2.dex
+path.1=classes2.dex
+base.0=/Volumes/Data-Storage/Flutter/card_app_flutter/card_app_admin/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex
