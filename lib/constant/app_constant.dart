@@ -7,6 +7,7 @@ class StringConstant {
   //common
   static const app_name = 'Card App';
   static const no_data_found = 'No Data Found!';
+  static const confirm_delete = "Are you sure you want to delete?";
 
   //login
   static const login = 'Login';
@@ -22,6 +23,7 @@ class StringConstant {
   //add admin
   static const admins = 'Admins';
   static const add_admin = 'Add Admin';
+  static const my_profile = 'My Profile';
 
   static const enter_name_validation = 'Please enter name';
   static const enter_address_validation = 'Please enter address';
@@ -37,7 +39,7 @@ class StringConstant {
   static const cards = 'Cards';
   static const enter_number_validation = 'Please enter card number';
   static const enter_valid_number_validation = 'Card number should be 10 digit';
-  static const enter_vendor_validation = 'Please enter card vendor';
+  static const enter_vendor_validation = 'Please select card vendor';
   static const enter_amount_validation = 'Please enter card amount';
 }
 

@@ -23,18 +23,22 @@ String getRandomId() {
   return uuid.v1();
 }
 
-showAlert(BuildContext context, String msg) {
+showAlert(BuildContext context, String msg, {Function? onClick}) {
   showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text("Error"),
+          title: const Text("Alert"),
           content: Text(msg),
           actions: [
             ElevatedButton(
               child: const Text("Ok"),
               onPressed: () {
                 Navigator.of(context).pop();
+
+                if (onClick != null) {
+                  onClick();
+                }
               },
             )
           ],
@@ -68,24 +72,24 @@ showLogoutDialog(BuildContext context) async {
   );
 }
 
-Future<bool> deleteConfirmDialog(
-    BuildContext context, Function onDelete) async {
+Future<bool> showConfirmationDialog(
+    BuildContext context, String message, Function onConfirm) async {
   return await showDialog(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
         title: const Text("Confirm"),
-        content: const Text("Are you sure you want to delete?"),
+        content: Text(message),
         actions: <Widget>[
           ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pop(true);
-                onDelete();
+                onConfirm();
               },
-              child: const Text("DELETE")),
+              child: const Text("Yes")),
           ElevatedButton(
             onPressed: () => Navigator.of(context).pop(false),
-            child: const Text("CANCEL"),
+            child: const Text("No"),
           ),
         ],
       );

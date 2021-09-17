@@ -1,13 +1,15 @@
 import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/customer_model.dart';
+import 'package:card_app_admin/screens/admin/customer/refill_balance_screen.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
 class AddCustomerScreen extends StatefulWidget {
-  const AddCustomerScreen({Key? key}) : super(key: key);
+  final CustomerModel? customerModel;
+  const AddCustomerScreen({Key? key, this.customerModel}) : super(key: key);
 
   @override
   _AddCustomerScreenState createState() => _AddCustomerScreenState();
@@ -28,15 +30,38 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
   bool confirmPwdVisible = false;
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    if (widget.customerModel != null) {
+      nameController.text = widget.customerModel?.custName ?? '';
+      addressController.text = widget.customerModel?.custAddress ?? '';
+      emailController.text = widget.customerModel?.custEmail ?? '';
+      balanceController.text =
+          widget.customerModel?.custBalance.toString() ?? '';
+      passwordController.text = widget.customerModel?.custPassword ?? '';
+      confirmPasswordController.text = widget.customerModel?.custPassword ?? '';
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Add Customer')),
+        appBar: AppBar(
+            title: Text(widget.customerModel == null
+                ? 'Add Customer'
+                : 'Edit Customer')),
         body: Form(
             key: _formKey,
             child: SingleChildScrollView(
                 child: Padding(
-              padding: EdgeInsets.fromLTRB(20, 50, 20, 20),
+              padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
               child: Column(children: <Widget>[
+                widget.customerModel?.isBlock ?? false
+                    ? getEditView()
+                    : Container(),
+                SizedBox(height: 10),
                 TextFormField(
                   controller: nameController,
                   decoration: InputDecoration(
@@ -58,6 +83,7 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                 ),
                 SizedBox(height: 20),
                 TextFormField(
+                  enabled: widget.customerModel == null ? true : false,
                   controller: emailController,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -71,19 +97,22 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                   ]),
                 ),
                 SizedBox(height: 20),
-                TextFormField(
-                  controller: balanceController,
-                  keyboardType: TextInputType.numberWithOptions(
-                    decimal: true,
-                    signed: false,
-                  ),
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Balance',
-                      labelStyle: TextStyle(fontSize: 15)),
-                  validator: RequiredValidator(
-                      errorText: StringConstant.enter_balance_validation),
-                ),
+                widget.customerModel == null
+                    ? TextFormField(
+                        enabled: widget.customerModel == null ? true : false,
+                        controller: balanceController,
+                        keyboardType: TextInputType.numberWithOptions(
+                          decimal: true,
+                          signed: false,
+                        ),
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Balance',
+                            labelStyle: TextStyle(fontSize: 15)),
+                        validator: RequiredValidator(
+                            errorText: StringConstant.enter_balance_validation),
+                      )
+                    : getRefillBalanceView(),
                 SizedBox(height: 20),
                 TextFormField(
                   obscureText: !pwdVisible,
@@ -149,15 +178,82 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                                   Colors.orange)),
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
-                              _addNewCustomer();
+                              if (widget.customerModel == null) {
+                                _addNewCustomer();
+                              } else {
+                                _editCustomer();
+                              }
                             }
                           },
-                          child: const Text('Submit',
+                          child: Text(
+                              widget.customerModel == null ? 'Submit' : 'Save',
                               style: TextStyle(fontSize: 18)),
                         ),
                       )
               ]),
             ))));
+  }
+
+  Widget getRefillBalanceView() {
+    return Row(children: [
+      Expanded(
+        child: TextFormField(
+          enabled: widget.customerModel == null ? true : false,
+          controller: balanceController,
+          keyboardType: TextInputType.numberWithOptions(
+            decimal: true,
+            signed: false,
+          ),
+          decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Balance',
+              labelStyle: TextStyle(fontSize: 15)),
+          validator: RequiredValidator(
+              errorText: StringConstant.enter_balance_validation),
+        ),
+      ),
+      SizedBox(width: 10),
+      Container(
+        height: 30,
+        child: ElevatedButton(
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.orange)),
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        RefillCustomerBalanceScreen(widget.customerModel!)));
+          },
+          child: const Text('Refill Balance', style: TextStyle(fontSize: 12)),
+        ),
+      )
+    ]);
+  }
+
+  Widget getEditView() {
+    return Row(
+      children: [
+        Text('This Customer is Blocked!', style: TextStyle(color: Colors.red)),
+        SizedBox(width: 10),
+        Container(
+          width: 80,
+          height: 30,
+          child: ElevatedButton(
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.red)),
+            onPressed: () {
+              showConfirmationDialog(
+                  context, 'Are you sure you want unblock this customer?', () {
+                DatabaseHelper.shared.unblockCustomer(widget.customerModel!);
+                Navigator.of(context).pop();
+              });
+            },
+            child: const Text('Unblock', style: TextStyle(fontSize: 12)),
+          ),
+        )
+      ],
+    );
   }
 
   _addNewCustomer() async {
@@ -177,7 +273,8 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
             DatabaseHelper.shared.getLoggedInUserModel()?.adminId ?? '',
             addressController.text,
             passwordController.text,
-            emailController.text);
+            emailController.text,
+            false);
 
         await DatabaseHelper.shared.addCustomerData(model);
 
@@ -188,6 +285,36 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
 
       setState(() {
         isLoading = false;
+      });
+    } catch (error) {
+      setState(() {
+        isLoading = false;
+      });
+      showAlert(context, error.toString());
+    }
+  }
+
+  _editCustomer() async {
+    setState(() {
+      isLoading = true;
+    });
+
+    try {
+      String oldPwd = widget.customerModel?.custPassword ?? '';
+
+      CustomerModel model = widget.customerModel!;
+      model.custName = nameController.text;
+      model.custAddress = addressController.text;
+      model.custPassword = passwordController.text;
+
+      await DatabaseHelper.shared.updateCustomer(oldPwd, model);
+
+      setState(() {
+        isLoading = false;
+      });
+
+      showAlert(context, 'Customer details updated.', onClick: () {
+        Navigator.of(context).pop();
       });
     } catch (error) {
       setState(() {

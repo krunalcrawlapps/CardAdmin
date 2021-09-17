@@ -5,10 +5,11 @@ class AdminModel {
   late String email;
   late String password;
   late bool isSuperAdmin;
+  late bool isBlock;
   String? superAdminId;
 
   AdminModel(this.adminId, this.name, this.address, this.email, this.password,
-      this.isSuperAdmin, this.superAdminId);
+      this.isSuperAdmin, this.isBlock, this.superAdminId);
 
   AdminModel.fromJson(Map<String, dynamic> json) {
     adminId = json['admin_id'];
@@ -17,6 +18,7 @@ class AdminModel {
     email = json['email'];
     password = json['password'];
     isSuperAdmin = json['isSuperAdmin'];
+    isBlock = json['isBlock'] == null ? false : json['isBlock'];
     superAdminId = json['superAdminId'];
   }
 
@@ -28,6 +30,7 @@ class AdminModel {
     data['email'] = this.email;
     data['password'] = this.password;
     data['isSuperAdmin'] = this.isSuperAdmin;
+    data['isBlock'] = this.isBlock;
     data['superAdminId'] = this.superAdminId;
     return data;
   }

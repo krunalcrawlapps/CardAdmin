@@ -162,6 +162,7 @@ class _AddAdminScreenState extends State<AddAdminScreen> {
             emailController.text,
             passwordController.text,
             false,
+            false,
             DatabaseHelper.shared.getLoggedInUserModel()?.adminId);
 
         await DatabaseHelper.shared.addAdminData(model);

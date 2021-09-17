@@ -4,6 +4,9 @@ import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/models/admin_model.dart';
 import 'package:card_app_admin/models/card_model.dart';
 import 'package:card_app_admin/models/customer_model.dart';
+import 'package:card_app_admin/models/vendor_model.dart';
+import 'package:card_app_admin/utils/date_utils.dart';
+import 'package:card_app_admin/utils/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -13,6 +16,8 @@ class FirebaseCollectionConstant {
   static const customer = 'Customers';
   static const cards = 'Cards';
   static const orders = 'Orders';
+  static const vendors = 'Vendors';
+  static const transactions = 'Transactions';
 }
 
 class DatabaseHelper {
@@ -30,7 +35,7 @@ class DatabaseHelper {
     pref = await SharedPreferences.getInstance();
   }
 
-  ///Login, Register, Delete
+  //region Login, Register, ChangePwd
   Future<User?> registerUser(String email, String password) async {
     try {
       UserCredential? userCredential = await _auth
@@ -70,7 +75,23 @@ class DatabaseHelper {
     }
   }
 
-  ///Login User Data
+  Future<bool> _changePassword(
+      String currentPassword, String newPassword) async {
+    try {
+      final user = FirebaseAuth.instance.currentUser;
+      final cred = EmailAuthProvider.credential(
+          email: user?.email ?? '', password: currentPassword);
+      UserCredential? userCred = await user?.reauthenticateWithCredential(cred);
+      userCred?.user?.updatePassword(newPassword);
+      return true;
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+  //endregion
+
+  //region Logged User
+
   Future<AdminModel?> getUserDataFromFirebase(String userId) async {
     DocumentSnapshot<Map<String, dynamic>> result = await _fireStore
         .collection(FirebaseCollectionConstant.admins)
@@ -104,8 +125,9 @@ class DatabaseHelper {
     _auth.signOut();
     pref.clear();
   }
+  //endregion
 
-  /// Admin
+  //region Admin
   addAdminData(AdminModel admin) async {
     try {
       await _fireStore
@@ -119,27 +141,81 @@ class DatabaseHelper {
         'password': admin.password,
         'isSuperAdmin': admin.isSuperAdmin,
         'superAdminId': admin.superAdminId,
+        'isBlock': admin.isBlock,
       });
     } on FirebaseAuthException catch (error) {
       throw error.message ?? ErrorMessage.something_wrong;
     }
   }
 
-  deleteAdmin(AdminModel admin) async {
+  blockAdmin(AdminModel admin) async {
     try {
-      bool isSuccess = await _deleteUserFromAuth(admin.email, admin.password);
-      if (isSuccess) {
-        await _fireStore
-            .collection(FirebaseCollectionConstant.admins)
-            .doc(admin.adminId)
-            .delete();
-      }
+      // bool isSuccess = await _deleteUserFromAuth(admin.email, admin.password);
+      //  if (isSuccess) {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.admins)
+          .doc(admin.adminId)
+          .update({'isBlock': true});
+      // }
     } on FirebaseAuthException catch (error) {
       throw error.message ?? ErrorMessage.something_wrong;
     }
   }
 
-  ///Customer
+  unblockAdmin(AdminModel admin) async {
+    try {
+      // bool isSuccess = await _deleteUserFromAuth(admin.email, admin.password);
+      //  if (isSuccess) {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.admins)
+          .doc(admin.adminId)
+          .update({'isBlock': false});
+      // }
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+
+  updateAdmin(AdminModel admin, String oldPwd, bool isFromMyProfile) async {
+    if (admin.password != oldPwd) {
+      //update password
+      bool isSuccess = await _changePassword(oldPwd, admin.password);
+      if (isSuccess) {
+        try {
+          await _fireStore
+              .collection(FirebaseCollectionConstant.admins)
+              .doc(admin.adminId)
+              .update({
+            'name': admin.name,
+            'address': admin.address,
+            'password': admin.password
+          });
+        } on FirebaseAuthException catch (error) {
+          throw error.message ?? ErrorMessage.something_wrong;
+        }
+      }
+    } else {
+      //password not change update other details
+      try {
+        await _fireStore
+            .collection(FirebaseCollectionConstant.admins)
+            .doc(admin.adminId)
+            .update({
+          'name': admin.name,
+          'address': admin.address,
+        });
+      } on FirebaseAuthException catch (error) {
+        throw error.message ?? ErrorMessage.something_wrong;
+      }
+    }
+
+    if (isFromMyProfile) {
+      saveUserModel(admin);
+    }
+  }
+  //endregion
+
+  //region Customer Methods
   addCustomerData(CustomerModel cust) async {
     try {
       await _fireStore
@@ -159,6 +235,70 @@ class DatabaseHelper {
     }
   }
 
+  blockCustomer(CustomerModel customer) async {
+    try {
+      // bool isSuccess = await _deleteUserFromAuth(admin.email, admin.password);
+      //  if (isSuccess) {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.customer)
+          .doc(customer.custId)
+          .update({'isBlock': true});
+      // }
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+
+  unblockCustomer(CustomerModel customer) async {
+    try {
+      // bool isSuccess = await _deleteUserFromAuth(admin.email, admin.password);
+      //  if (isSuccess) {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.customer)
+          .doc(customer.custId)
+          .update({'isBlock': false});
+      // }
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+
+  updateCustomer(String oldPwd, CustomerModel customer) async {
+    if (customer.custPassword != oldPwd) {
+      //update password
+      bool isSuccess = await _changePassword(oldPwd, customer.custPassword);
+      if (isSuccess) {
+        try {
+          await _fireStore
+              .collection(FirebaseCollectionConstant.customer)
+              .doc(customer.custId)
+              .update({
+            'cust_name': customer.custName,
+            'cust_balance': customer.custBalance,
+            'cust_address': customer.custAddress,
+            'cust_password': customer.custPassword,
+          });
+        } on FirebaseAuthException catch (error) {
+          throw error.message ?? ErrorMessage.something_wrong;
+        }
+      }
+    } else {
+      //password not change update other details
+      try {
+        await _fireStore
+            .collection(FirebaseCollectionConstant.customer)
+            .doc(customer.custId)
+            .update({
+          'cust_name': customer.custName,
+          'cust_balance': customer.custBalance,
+          'cust_address': customer.custAddress,
+        });
+      } on FirebaseAuthException catch (error) {
+        throw error.message ?? ErrorMessage.something_wrong;
+      }
+    }
+  }
+
   deleteCustomer(CustomerModel customer) async {
     try {
       bool isSuccess =
@@ -174,7 +314,41 @@ class DatabaseHelper {
     }
   }
 
-  ///Card
+  updateCustomerBalance(CustomerModel customer) async {
+    try {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.customer)
+          .doc(customer.custId)
+          .update({'cust_balance': customer.custBalance});
+
+      await addEntryInTransaction(customer);
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+
+  addEntryInTransaction(CustomerModel customer) async {
+    String randomId = getRandomId();
+
+    try {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.transactions)
+          .doc(randomId)
+          .set({
+        'transaction_id': randomId,
+        'datetime':
+            DateTimeUtils.getDateTime(DateTime.now().millisecondsSinceEpoch),
+        'admin_id': getLoggedInUserModel()?.adminId ?? '',
+        'cust_id': customer.custId,
+        'amount': customer.custBalance,
+      });
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+  //endregion
+
+  //region Card
   addCardData(CardModel card) async {
     try {
       await _fireStore
@@ -203,4 +377,75 @@ class DatabaseHelper {
       throw error.message ?? ErrorMessage.something_wrong;
     }
   }
+
+  updateCardDetails(CardModel card) async {
+    try {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.cards)
+          .doc(card.cardId)
+          .update({
+        'card_vendor': card.cardVendor,
+        'amount': card.amount,
+        'card_number': card.cardNumber
+      });
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+
+  //endregion
+
+  //region Vendor
+  addNewVendor(VendorModel vendor) async {
+    try {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.vendors)
+          .doc(vendor.vendorId)
+          .set({
+        'vendor_id': vendor.vendorId,
+        'vendor_name': vendor.vendorName,
+        'superAdminId': vendor.superAdminId
+      });
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+
+  updateVendor(VendorModel vendor) async {
+    try {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.vendors)
+          .doc(vendor.vendorId)
+          .set({'vendor_name': vendor.vendorName});
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+
+  deleteVendor(String vendorId) async {
+    try {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.vendors)
+          .doc(vendorId)
+          .delete();
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+
+  Future<List<VendorModel>> getAllVendors() async {
+    var collection = _fireStore.collection(FirebaseCollectionConstant.vendors);
+    var querySnapshot = await collection.get();
+
+    List<VendorModel> arrVendors = [];
+    for (var doc in querySnapshot.docs) {
+      Map<String, dynamic> data = doc.data();
+      VendorModel model = VendorModel.fromJson(data);
+      arrVendors.add(model);
+    }
+
+    return arrVendors;
+  }
+
+  //endregion
 }

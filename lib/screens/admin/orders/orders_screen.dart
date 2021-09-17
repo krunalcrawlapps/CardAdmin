@@ -1,10 +1,11 @@
 import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/order_model.dart';
+import 'package:card_app_admin/screens/admin/orders/order_details_screen.dart';
+import 'package:card_app_admin/utils/date_utils.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class OrdersScreen extends StatefulWidget {
   const OrdersScreen({Key? key}) : super(key: key);
@@ -63,27 +64,17 @@ class _OrdersScreenState extends State<OrdersScreen> {
             itemBuilder: (context, index) {
               return Padding(
                   padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
-                  child: Dismissible(
-                    key: ValueKey<String>(data.docs[index].data().adminId),
-                    confirmDismiss: (DismissDirection direction) async {
-                      deleteConfirmDialog(context, () {});
-                    },
-                    onDismissed: (direction) {},
-                    background: Container(
-                      child: Icon(
-                        Icons.delete,
-                        color: Colors.white,
-                        size: 40,
-                      ),
-                      alignment: Alignment.centerRight,
-                      padding: EdgeInsets.only(right: 5),
-                      decoration: BoxDecoration(
-                        color: Colors.red,
-                      ),
-                      margin: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-                    ),
-                    child: Container(
-                      width: double.infinity,
+                  child: Container(
+                    width: double.infinity,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    OrderDetailsScreen(
+                                        data.docs[index].data())));
+                      },
                       child: Card(
                           child: Padding(
                         padding: EdgeInsets.all(5),
@@ -95,17 +86,8 @@ class _OrdersScreenState extends State<OrdersScreen> {
                               Text('Order By: ' +
                                   data.docs[index].data().custName),
                               SizedBox(height: 5),
-                              Text('Card Number: ' +
-                                  data.docs[index]
-                                      .data()
-                                      .cardNumber
-                                      .toString()),
-                              SizedBox(height: 5),
-                              Text('Card Vendor: ' +
-                                  data.docs[index].data().cardVendor),
-                              SizedBox(height: 5),
                               Text('Order Date: ' +
-                                  getDateTime(data.docs[index]
+                                  DateTimeUtils.getDateTime(data.docs[index]
                                       .data()
                                       .transactionDateTime)),
                             ]),
@@ -117,10 +99,5 @@ class _OrdersScreenState extends State<OrdersScreen> {
         },
       ),
     );
-  }
-
-  String getDateTime(int timestamp) {
-    var dt = DateTime.fromMillisecondsSinceEpoch(timestamp);
-    return DateFormat('dd/MM/yyyy, hh:mm a').format(dt);
   }
 }

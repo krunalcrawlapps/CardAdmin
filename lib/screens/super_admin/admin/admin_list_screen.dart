@@ -1,7 +1,8 @@
 import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/admin_model.dart';
-import 'package:card_app_admin/screens/super_admin/add_admin_screen.dart';
+import 'package:card_app_admin/screens/common/profile_screen.dart';
+import 'package:card_app_admin/screens/super_admin/admin/add_admin_screen.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -74,14 +75,19 @@ class _AdminListScreenState extends State<AdminListScreen> {
               return Padding(
                   padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
                   child: Dismissible(
+                    direction: data.docs[index].data().isBlock
+                        ? DismissDirection.none
+                        : DismissDirection.endToStart,
                     key: ValueKey<String>(data.docs[index].data().adminId),
                     confirmDismiss: (DismissDirection direction) async {
-                      deleteConfirmDialog(context, () async {
+                      showConfirmationDialog(
+                          context, 'Are you sure you want block this admin?',
+                          () async {
                         try {
                           showProgressDialog(
                               _scaffoldKey.currentContext ?? context);
                           await DatabaseHelper.shared
-                              .deleteAdmin(data.docs[index].data());
+                              .blockAdmin(data.docs[index].data());
                           hideLoader(_scaffoldKey.currentContext ?? context);
                         } catch (error) {
                           showAlert(context, error.toString());
@@ -103,21 +109,34 @@ class _AdminListScreenState extends State<AdminListScreen> {
                       ),
                       margin: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                     ),
-                    child: Container(
-                      width: double.infinity,
-                      child: Card(
-                          child: Padding(
-                        padding: EdgeInsets.all(5),
-                        child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(height: 5),
-                              Text(data.docs[index].data().name),
-                              SizedBox(height: 5),
-                              Text(data.docs[index].data().email),
-                            ]),
-                      )),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    ProfileScreen(
+                                        adminModel: data.docs[index].data())));
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        child: Card(
+                            color: data.docs[index].data().isBlock
+                                ? Colors.red
+                                : Colors.white,
+                            child: Padding(
+                              padding: EdgeInsets.all(5),
+                              child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SizedBox(height: 5),
+                                    Text(data.docs[index].data().name),
+                                    SizedBox(height: 5),
+                                    Text(data.docs[index].data().email),
+                                  ]),
+                            )),
+                      ),
                     ),
                   ));
             },

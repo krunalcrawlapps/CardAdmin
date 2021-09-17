@@ -2,7 +2,7 @@ import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/admin_model.dart';
 import 'package:card_app_admin/screens/admin/home_screen.dart';
-import 'package:card_app_admin/screens/super_admin/admin_list_screen.dart';
+import 'package:card_app_admin/screens/super_admin/super_admin_home.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -145,18 +145,24 @@ class _LoginScreenState extends State<LoginScreen> {
     });
 
     if (currentUser != null) {
-      DatabaseHelper.shared.saveUserModel(currentUser);
-
-      if (currentUser.isSuperAdmin) {
-        //user is super admin
-        Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (BuildContext context) => AdminListScreen()));
+      if (currentUser.isBlock) {
+        showAlert(context, 'Your account has been blocked!');
       } else {
-        //user is normal admin
-        Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (BuildContext context) => HomeScreen()));
+        DatabaseHelper.shared.saveUserModel(currentUser);
+
+        if (currentUser.isSuperAdmin) {
+          //user is super admin
+          Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                  builder: (BuildContext context) => SuperAdminHome()));
+        } else {
+          //user is normal admin
+          Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                  builder: (BuildContext context) => HomeScreen()));
+        }
       }
     } else {
       showAlert(context, ErrorMessage.something_wrong);
