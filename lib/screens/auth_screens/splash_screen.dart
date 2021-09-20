@@ -4,7 +4,6 @@ import 'package:card_app_admin/models/admin_model.dart';
 import 'package:card_app_admin/screens/admin/home_screen.dart';
 import 'package:card_app_admin/screens/super_admin/super_admin_home.dart';
 import 'package:card_app_admin/utils/utils.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'login_screen.dart';
@@ -58,11 +57,13 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<Widget?> _checkLoggedInUserAndNavigate(BuildContext context) async {
-    User? user = FirebaseAuth.instance.currentUser;
+    // User? user = FirebaseAuth.instance.currentUser;
 
-    if (user != null) {
+    AdminModel? admin = DatabaseHelper.shared.getLoggedInUserModel();
+
+    if (admin != null) {
       AdminModel? currentUser =
-          await DatabaseHelper.shared.getUserDataFromFirebase(user.uid);
+          await DatabaseHelper.shared.getUserDataFromFirebase(admin.adminId);
 
       if (currentUser != null) {
         if (currentUser.isBlock) {

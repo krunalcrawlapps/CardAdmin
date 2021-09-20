@@ -57,7 +57,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         appBar: AppBar(
           title: Text(widget.adminModel == null
               ? StringConstant.my_profile
-              : 'Admin Details'),
+              : 'Edit Admin'),
           actions: [
             widget.adminModel == null
                 ? IconButton(

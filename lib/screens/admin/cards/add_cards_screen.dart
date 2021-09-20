@@ -51,7 +51,7 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text(widget.cardModel != null ? 'Add Card' : 'Edit Card')),
+            title: Text(widget.cardModel == null ? 'Add Card' : 'Edit Card')),
         body: isVendorLoading
             ? Center(child: CircularProgressIndicator())
             : Form(
