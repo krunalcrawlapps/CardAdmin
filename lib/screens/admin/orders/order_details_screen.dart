@@ -44,8 +44,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                   Text('Order Date:', style: TextStyle(fontSize: 16)),
                   SizedBox(width: 5),
                   Text(
-                      DateTimeUtils.getDateTime(
-                          widget.orderModel.transactionDateTime),
+                      widget.orderModel.transactionDateTime,
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w500))
                 ]),

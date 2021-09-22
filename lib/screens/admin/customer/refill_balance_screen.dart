@@ -8,7 +8,9 @@ import 'package:form_field_validator/form_field_validator.dart';
 
 class RefillCustomerBalanceScreen extends StatefulWidget {
   final CustomerModel customerModel;
-  const RefillCustomerBalanceScreen(this.customerModel, {Key? key})
+  final bool isRefill;
+  const RefillCustomerBalanceScreen(this.customerModel, this.isRefill,
+      {Key? key})
       : super(key: key);
 
   @override
@@ -34,7 +36,8 @@ class _RefillCustomerBalanceScreenState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Update Balance')),
+        appBar: AppBar(
+            title: Text(widget.isRefill ? 'Refill Balance' : 'Update Balance')),
         body: Form(
             key: _formKey,
             child: SingleChildScrollView(
@@ -66,12 +69,21 @@ class _RefillCustomerBalanceScreenState
                                   Colors.orange)),
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
-                              widget.customerModel.custBalance =
-                                  double.parse(balanceController.text);
+                              if (widget.isRefill) {
+                                double newBalance =
+                                    widget.customerModel.custBalance +
+                                        double.parse(balanceController.text);
+                                widget.customerModel.custBalance = newBalance;
+                              } else {
+                                widget.customerModel.custBalance =
+                                    double.parse(balanceController.text);
+                              }
+
                               updateCustomerBalance(widget.customerModel);
                             }
                           },
-                          child: Text('Update', style: TextStyle(fontSize: 18)),
+                          child: Text(widget.isRefill ? 'Refill' : 'Update',
+                              style: TextStyle(fontSize: 18)),
                         ),
                       )
               ]),

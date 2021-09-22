@@ -223,9 +223,27 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                 context,
                 MaterialPageRoute(
                     builder: (BuildContext context) =>
-                        RefillCustomerBalanceScreen(widget.customerModel!)));
+                        RefillCustomerBalanceScreen(
+                            widget.customerModel!, true)));
           },
           child: const Text('Refill Balance', style: TextStyle(fontSize: 12)),
+        ),
+      ),
+      SizedBox(width: 10),
+      Container(
+        height: 30,
+        child: ElevatedButton(
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.orange)),
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        RefillCustomerBalanceScreen(
+                            widget.customerModel!, false)));
+          },
+          child: const Text('Update Balance', style: TextStyle(fontSize: 12)),
         ),
       )
     ]);

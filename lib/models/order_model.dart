@@ -1,6 +1,6 @@
 class OrderModel {
   late String orderId;
-  late int transactionDateTime;
+  late String transactionDateTime;
   late String adminId;
   late String custId;
   late String custName;
