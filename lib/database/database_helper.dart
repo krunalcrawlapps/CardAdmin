@@ -3,12 +3,15 @@ import 'dart:convert';
 import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/models/admin_model.dart';
 import 'package:card_app_admin/models/card_model.dart';
+import 'package:card_app_admin/models/category_model.dart';
 import 'package:card_app_admin/models/customer_model.dart';
+import 'package:card_app_admin/models/subcategory_model.dart';
 import 'package:card_app_admin/models/vendor_model.dart';
 import 'package:card_app_admin/utils/date_utils.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class FirebaseCollectionConstant {
@@ -18,6 +21,8 @@ class FirebaseCollectionConstant {
   static const orders = 'Orders';
   static const vendors = 'Vendors';
   static const transactions = 'Transactions';
+  static const category = 'Category';
+  static const subcategory = 'SubCategory';
 }
 
 class DatabaseHelper {
@@ -404,29 +409,32 @@ class DatabaseHelper {
           .set({
         'vendor_id': vendor.vendorId,
         'vendor_name': vendor.vendorName,
-        'superAdminId': vendor.superAdminId
+        'superAdminId': vendor.superAdminId,
+        'imageUrl': vendor.imageUrl
       });
     } on FirebaseAuthException catch (error) {
       throw error.message ?? ErrorMessage.something_wrong;
     }
   }
 
-  updateVendor(VendorModel vendor) async {
-    try {
-      await _fireStore
-          .collection(FirebaseCollectionConstant.vendors)
-          .doc(vendor.vendorId)
-          .set({'vendor_name': vendor.vendorName});
-    } on FirebaseAuthException catch (error) {
-      throw error.message ?? ErrorMessage.something_wrong;
-    }
-  }
+  // updateVendor(VendorModel vendor) async {
+  //   try {
+  //     await _fireStore
+  //         .collection(FirebaseCollectionConstant.vendors)
+  //         .doc(vendor.vendorId)
+  //         .set({'vendor_name': vendor.vendorName, 'imageUrl': vendor.imageUrl});
+  //   } on FirebaseAuthException catch (error) {
+  //     throw error.message ?? ErrorMessage.something_wrong;
+  //   }
+  // }
 
-  deleteVendor(String vendorId) async {
+  deleteVendor(VendorModel model) async {
     try {
+      await FirebaseStorage.instance.refFromURL(model.imageUrl).delete();
+
       await _fireStore
           .collection(FirebaseCollectionConstant.vendors)
-          .doc(vendorId)
+          .doc(model.vendorId)
           .delete();
     } on FirebaseAuthException catch (error) {
       throw error.message ?? ErrorMessage.something_wrong;
@@ -448,4 +456,80 @@ class DatabaseHelper {
   }
 
   //endregion
+
+  //region Category/SubCategory
+  addUpdateCategory(CategoryModel category) async {
+    try {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.category)
+          .doc(category.catId)
+          .set({
+        'category_id': category.catId,
+        'category_name': category.catName,
+        'vendor_id': category.vendorId,
+        'imageUrl': category.imageUrl
+      });
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+
+  deleteCategory(CategoryModel model) async {
+    try {
+      await FirebaseStorage.instance.refFromURL(model.imageUrl).delete();
+
+      await _fireStore
+          .collection(FirebaseCollectionConstant.category)
+          .doc(model.catId)
+          .delete();
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+
+  addUpdateSubCategory(SubCategoryModel subCategoryModel) async {
+    try {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.subcategory)
+          .doc(subCategoryModel.subCatId)
+          .set({
+        'subCatId': subCategoryModel.subCatId,
+        'category_id': subCategoryModel.catId,
+        'subCatName': subCategoryModel.subCatName,
+        'imageUrl': subCategoryModel.imageUrl,
+        'amount': subCategoryModel.amount,
+        'currency': subCategoryModel.currency
+      });
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+
+  deleteSubCategory(SubCategoryModel model) async {
+    try {
+      await FirebaseStorage.instance.refFromURL(model.imageUrl).delete();
+
+      await _fireStore
+          .collection(FirebaseCollectionConstant.subcategory)
+          .doc(model.subCatId)
+          .delete();
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+
+  Future<List<CategoryModel>> getAllCategory() async {
+    var collection = _fireStore.collection(FirebaseCollectionConstant.category);
+    var querySnapshot = await collection.get();
+
+    List<CategoryModel> arrCategory = [];
+    for (var doc in querySnapshot.docs) {
+      Map<String, dynamic> data = doc.data();
+      CategoryModel model = CategoryModel.fromJson(data);
+      arrCategory.add(model);
+    }
+
+    return arrCategory;
+  }
+//endregion
 }

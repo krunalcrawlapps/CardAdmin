@@ -5,12 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
-showProgressDialog(BuildContext context) => showDialog(
+showLoader(BuildContext context) => showDialog(
     context: context, builder: (BuildContext context) => LoaderDialog());
-
-showLoader(BuildContext context) {
-  showProgressDialog(context);
-}
 
 hideLoader(BuildContext context) {
   if (Navigator.of(context).canPop()) {

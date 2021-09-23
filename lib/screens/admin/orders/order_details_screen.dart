@@ -1,7 +1,6 @@
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/card_model.dart';
 import 'package:card_app_admin/models/order_model.dart';
-import 'package:card_app_admin/utils/date_utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
@@ -43,8 +42,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                 Row(children: [
                   Text('Order Date:', style: TextStyle(fontSize: 16)),
                   SizedBox(width: 5),
-                  Text(
-                      widget.orderModel.transactionDateTime,
+                  Text(widget.orderModel.transactionDateTime,
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w500))
                 ]),

@@ -84,8 +84,7 @@ class _AdminListScreenState extends State<AdminListScreen> {
                           context, 'Are you sure you want block this admin?',
                           () async {
                         try {
-                          showProgressDialog(
-                              _scaffoldKey.currentContext ?? context);
+                          showLoader(_scaffoldKey.currentContext ?? context);
                           await DatabaseHelper.shared
                               .blockAdmin(data.docs[index].data());
                           hideLoader(_scaffoldKey.currentContext ?? context);

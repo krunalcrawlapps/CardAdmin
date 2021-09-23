@@ -39,8 +39,18 @@ class StringConstant {
   static const cards = 'Cards';
   static const enter_number_validation = 'Please enter card number';
   static const enter_valid_number_validation = 'Card number should be 10 digit';
-  static const enter_vendor_validation = 'Please select card vendor';
+  static const enter_vendor_validation = 'Please select vendor';
   static const enter_amount_validation = 'Please enter card amount';
+
+  //Category
+  static const category = 'Category';
+  static const enter_category_name_validation = 'Please enter category name';
+
+  static const enter_subcategory_name_validation =
+      'Please enter sub category name';
+  static const select_category_validation = 'Please select category';
+  static const enter_currency_validation = "Please enter currency";
+  static const enter_sub_amount_validation = "Please enter amount";
 }
 
 class ErrorMessage {

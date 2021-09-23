@@ -1,9 +1,14 @@
+import 'dart:io';
+
 import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
+import 'package:card_app_admin/helper/image_helper.dart';
 import 'package:card_app_admin/models/vendor_model.dart';
 import 'package:card_app_admin/utils/utils.dart';
+import 'package:card_app_admin/widgets/select_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:image_picker/image_picker.dart';
 
 class AddVendorScreen extends StatefulWidget {
   final VendorModel? vendorModel;
@@ -18,6 +23,10 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController nameController = TextEditingController();
   bool isLoading = false;
+
+  //image
+  XFile? _image;
+  bool isShowImageValidation = false;
 
   @override
   void initState() {
@@ -50,6 +59,16 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                   validator: RequiredValidator(
                       errorText: StringConstant.enter_name_validation),
                 ),
+                SizedBox(height: 20),
+                getImagePickerWidget(
+                    context,
+                    _image,
+                    widget.vendorModel?.imageUrl,
+                    isShowImageValidation, (file) {
+                  setState(() {
+                    _image = file;
+                  });
+                }),
                 SizedBox(height: 50),
                 isLoading
                     ? const CircularProgressIndicator()
@@ -61,11 +80,28 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                               backgroundColor: MaterialStateProperty.all<Color>(
                                   Colors.orange)),
                           onPressed: () {
+                            if (widget.vendorModel == null) {
+                              if (_image == null) {
+                                setState(() {
+                                  isShowImageValidation = true;
+                                });
+                              } else {
+                                setState(() {
+                                  isShowImageValidation = false;
+                                });
+                              }
+                            }
                             if (_formKey.currentState!.validate()) {
                               if (widget.vendorModel != null) {
                                 _updateVendor();
                               } else {
-                                _addVendor();
+                                if (_image == null) {
+                                  setState(() {
+                                    isShowImageValidation = true;
+                                  });
+                                } else {
+                                  _addVendor();
+                                }
                               }
                             }
                           },
@@ -79,51 +115,46 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
   }
 
   _addVendor() async {
-    setState(() {
-      isLoading = true;
-    });
-
     try {
-      setState(() {
-        isLoading = false;
-      });
-
-      VendorModel vendor = VendorModel(getRandomId(), nameController.text,
-          DatabaseHelper.shared.getLoggedInUserModel()?.adminId ?? '');
+      showLoader(context);
+      String randomId = getRandomId();
+      String? imgUrl = await ImageUploadHelper.shared
+          .uploadImage(randomId, File(_image!.path));
+      VendorModel vendor = VendorModel(
+          randomId,
+          nameController.text,
+          DatabaseHelper.shared.getLoggedInUserModel()?.adminId ?? '',
+          imgUrl ?? '');
       DatabaseHelper.shared.addNewVendor(vendor);
-
+      hideLoader(context);
       showAlert(context, 'Vendor added successfully.', onClick: () {
         Navigator.of(context).pop();
       });
     } catch (error) {
-      setState(() {
-        isLoading = false;
-      });
+      hideLoader(context);
       showAlert(context, error.toString());
     }
   }
 
   _updateVendor() async {
-    setState(() {
-      isLoading = true;
-    });
-
     try {
-      setState(() {
-        isLoading = false;
-      });
+      showLoader(context);
 
       VendorModel? vendor = widget.vendorModel;
+      if (_image != null) {
+        String? imgUrl = await ImageUploadHelper.shared.uploadImage(
+            widget.vendorModel?.vendorId ?? '', File(_image!.path));
+        vendor?.imageUrl = imgUrl ?? '';
+      }
+
       vendor?.vendorName = nameController.text;
       DatabaseHelper.shared.addNewVendor(vendor!);
-
+      hideLoader(context);
       showAlert(context, 'Vendor updated successfully.', onClick: () {
         Navigator.of(context).pop();
       });
     } catch (error) {
-      setState(() {
-        isLoading = false;
-      });
+      hideLoader(context);
       showAlert(context, error.toString());
     }
   }
