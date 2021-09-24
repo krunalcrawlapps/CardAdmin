@@ -207,6 +207,12 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
         category?.imageUrl = imgUrl ?? '';
       }
 
+      String vendorId = arrVendors
+          .where((element) => element.vendorName == vendorName)
+          .toList()
+          .first
+          .vendorId;
+      category?.vendorId = vendorId;
       category?.catName = catNameController.text;
       DatabaseHelper.shared.addUpdateCategory(category!);
       hideLoader(context);

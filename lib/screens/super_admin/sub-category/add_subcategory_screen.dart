@@ -243,6 +243,12 @@ class _AddSubCategoryScreenState extends State<AddSubCategoryScreen> {
         subCategory?.imageUrl = imgUrl ?? '';
       }
 
+      String catId = arrCategory
+          .where((element) => element.catName == categoryName)
+          .toList()
+          .first
+          .catId;
+      subCategory?.catId = catId;
       subCategory?.subCatName = subCatNameController.text;
       subCategory?.amount = double.parse(amountController.text);
       subCategory?.currency = currencyController.text;
