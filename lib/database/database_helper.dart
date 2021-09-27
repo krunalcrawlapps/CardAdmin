@@ -366,6 +366,7 @@ class DatabaseHelper {
         'amount': card.amount,
         'card_status': card.cardStatus,
         'admin_id': card.adminId,
+        'vendor_id': card.vendorId,
       });
     } on FirebaseAuthException catch (error) {
       throw error.message ?? ErrorMessage.something_wrong;
@@ -390,6 +391,7 @@ class DatabaseHelper {
           .doc(card.cardId)
           .update({
         'card_vendor': card.cardVendor,
+        'vendor_id': card.vendorId,
         'amount': card.amount,
         'card_number': card.cardNumber
       });

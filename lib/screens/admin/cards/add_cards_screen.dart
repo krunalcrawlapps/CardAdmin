@@ -21,6 +21,7 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
   TextEditingController cardAmountController = TextEditingController();
 
   String? cardVendor;
+  String? cardVendorId;
 
   bool isVendorLoading = true;
   bool isLoading = false;
@@ -38,6 +39,7 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
     arrVendors = await DatabaseHelper.shared.getAllVendors();
     if (widget.cardModel != null) {
       cardVendor = widget.cardModel?.cardVendor;
+      cardVendorId = widget.cardModel?.vendorId;
       cardNumberController.text = widget.cardModel?.cardNumber.toString() ?? '';
       cardAmountController.text = widget.cardModel?.amount.toString() ?? '';
     }
@@ -154,13 +156,20 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
     });
 
     try {
+      String vendorId = arrVendors
+          .where((element) => element.vendorName == cardVendor)
+          .toList()
+          .first
+          .vendorId;
+
       CardModel card = CardModel(
           getRandomId(),
-          cardVendor ?? '',
           int.parse(cardNumberController.text),
           double.parse(cardAmountController.text),
           CardStatus.available,
-          DatabaseHelper.shared.getLoggedInUserModel()?.adminId ?? '');
+          DatabaseHelper.shared.getLoggedInUserModel()?.adminId ?? '',
+          cardVendor ?? '',
+          vendorId);
 
       await DatabaseHelper.shared.addCardData(card);
       Navigator.pop(context);
@@ -181,9 +190,16 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
     });
 
     try {
+      String vendorId = arrVendors
+          .where((element) => element.vendorName == cardVendor)
+          .toList()
+          .first
+          .vendorId;
+
       CardModel model = widget.cardModel!;
       model.cardNumber = int.parse(cardNumberController.text);
       model.cardVendor = cardVendor ?? '';
+      model.vendorId = vendorId;
       model.amount = double.parse(cardAmountController.text);
 
       await DatabaseHelper.shared.updateCardDetails(model);
