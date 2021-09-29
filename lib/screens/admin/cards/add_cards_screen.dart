@@ -1,6 +1,8 @@
 import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/card_model.dart';
+import 'package:card_app_admin/models/category_model.dart';
+import 'package:card_app_admin/models/subcategory_model.dart';
 import 'package:card_app_admin/models/vendor_model.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:flutter/material.dart';
@@ -18,30 +20,48 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
   //variables
   final _formKey = GlobalKey<FormState>();
   TextEditingController cardNumberController = TextEditingController();
-  TextEditingController cardAmountController = TextEditingController();
+  // TextEditingController cardAmountController = TextEditingController();
 
-  String? cardVendor;
-  String? cardVendorId;
+  String? selectedCardVendor;
+  String? selectedCardVendorId;
+
+  String? selectedCategory;
+  String? selectedCategoryId;
+
+  String? selectedSubCategory;
+  String? selectedSubCategoryId;
 
   bool isVendorLoading = true;
   bool isLoading = false;
   List<VendorModel> arrVendors = [];
+  List<CategoryModel> arrCategory = [];
+  List<SubCategoryModel> arrSubCategory = [];
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
 
-    getAllVendor();
+    getAllData();
   }
 
-  getAllVendor() async {
+  getAllData() async {
     arrVendors = await DatabaseHelper.shared.getAllVendors();
+    arrCategory = await DatabaseHelper.shared.getAllCategory();
+    arrSubCategory = await DatabaseHelper.shared.getAllSubCategory();
+
     if (widget.cardModel != null) {
-      cardVendor = widget.cardModel?.cardVendor;
-      cardVendorId = widget.cardModel?.vendorId;
+      selectedCardVendor = widget.cardModel?.vendorName;
+      selectedCardVendorId = widget.cardModel?.vendorId;
+
+      selectedCategory = widget.cardModel?.catName;
+      selectedCategoryId = widget.cardModel?.catId;
+
+      selectedSubCategory = widget.cardModel?.subCatName;
+      selectedSubCategoryId = widget.cardModel?.subCatId;
+
       cardNumberController.text = widget.cardModel?.cardNumber.toString() ?? '';
-      cardAmountController.text = widget.cardModel?.amount.toString() ?? '';
+      // cardAmountController.text = widget.cardModel?.amount.toString() ?? '';
     }
     setState(() {
       isVendorLoading = false;
@@ -79,18 +99,53 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
                       ]),
                     ),
                     SizedBox(height: 20),
-                    TextFormField(
-                      controller: cardAmountController,
-                      keyboardType: TextInputType.numberWithOptions(
-                        decimal: true,
-                        signed: false,
+                    // TextFormField(
+                    //   controller: cardAmountController,
+                    //   keyboardType: TextInputType.numberWithOptions(
+                    //     decimal: true,
+                    //     signed: false,
+                    //   ),
+                    //   decoration: InputDecoration(
+                    //       border: OutlineInputBorder(),
+                    //       labelText: 'Card Amount',
+                    //       labelStyle: TextStyle(fontSize: 15)),
+                    //   validator: RequiredValidator(
+                    //       errorText: StringConstant.enter_amount_validation),
+                    // ),
+                    Container(
+                      height: 60,
+                      padding: const EdgeInsets.all(8.0),
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black26),
+                          borderRadius: BorderRadius.all(Radius.circular(5.0))),
+                      alignment: Alignment.center,
+                      child: DropdownButtonFormField<String>(
+                        decoration: InputDecoration.collapsed(hintText: ''),
+                        value: selectedCardVendor,
+                        items: arrVendors
+                            .map((e) => e.vendorName)
+                            .map((label) => DropdownMenuItem(
+                                  child: Text(label.toString()),
+                                  value: label,
+                                ))
+                            .toList(),
+                        hint: Text('Select Card Vendor'),
+                        onChanged: (value) {
+                          setState(() {
+                            selectedCardVendor = value;
+                            String vendorId = arrVendors
+                                .where((element) =>
+                                    element.vendorName == selectedCardVendor)
+                                .toList()
+                                .first
+                                .vendorId;
+                            selectedCardVendorId = vendorId;
+                          });
+                        },
+                        validator: (value) => value == null
+                            ? StringConstant.enter_vendor_validation
+                            : null,
                       ),
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'Card Amount',
-                          labelStyle: TextStyle(fontSize: 15)),
-                      validator: RequiredValidator(
-                          errorText: StringConstant.enter_amount_validation),
                     ),
                     SizedBox(height: 20),
                     Container(
@@ -102,9 +157,51 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
                       alignment: Alignment.center,
                       child: DropdownButtonFormField<String>(
                         decoration: InputDecoration.collapsed(hintText: ''),
-                        value: cardVendor,
-                        items: arrVendors
-                            .map((e) => e.vendorName)
+                        value: selectedCategory,
+                        items: arrCategory
+                            .where((element) =>
+                                element.vendorId == selectedCardVendorId)
+                            .toList()
+                            .map((e) => e.catName)
+                            .map((label) => DropdownMenuItem(
+                                  child: Text(label.toString()),
+                                  value: label,
+                                ))
+                            .toList(),
+                        hint: Text('Select Card Category'),
+                        onChanged: (value) {
+                          setState(() {
+                            selectedCategory = value;
+                            String catId = arrCategory
+                                .where((element) =>
+                                    element.catName == selectedCategory)
+                                .toList()
+                                .first
+                                .catId;
+                            selectedCategoryId = catId;
+                          });
+                        },
+                        validator: (value) => value == null
+                            ? StringConstant.select_category_validation
+                            : null,
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      height: 60,
+                      padding: const EdgeInsets.all(8.0),
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black26),
+                          borderRadius: BorderRadius.all(Radius.circular(5.0))),
+                      alignment: Alignment.center,
+                      child: DropdownButtonFormField<String>(
+                        decoration: InputDecoration.collapsed(hintText: ''),
+                        value: selectedSubCategory,
+                        items: arrSubCategory
+                            .where((element) =>
+                                element.catId == selectedCategoryId)
+                            .toList()
+                            .map((e) => e.subCatName)
                             .map((label) => DropdownMenuItem(
                                   child: Text(label.toString()),
                                   value: label,
@@ -113,11 +210,18 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
                         hint: Text('Select Card Vendor'),
                         onChanged: (value) {
                           setState(() {
-                            cardVendor = value;
+                            selectedSubCategory = value;
+                            String subCatId = arrSubCategory
+                                .where((element) =>
+                                    element.subCatName == selectedSubCategory)
+                                .toList()
+                                .first
+                                .subCatId;
+                            selectedSubCategoryId = subCatId;
                           });
                         },
                         validator: (value) => value == null
-                            ? StringConstant.enter_vendor_validation
+                            ? StringConstant.select_subcategory_validation
                             : null,
                       ),
                     ),
@@ -156,20 +260,19 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
     });
 
     try {
-      String vendorId = arrVendors
-          .where((element) => element.vendorName == cardVendor)
-          .toList()
-          .first
-          .vendorId;
-
       CardModel card = CardModel(
           getRandomId(),
           int.parse(cardNumberController.text),
-          double.parse(cardAmountController.text),
+          // double.parse(cardAmountController.text),
           CardStatus.available,
           DatabaseHelper.shared.getLoggedInUserModel()?.adminId ?? '',
-          cardVendor ?? '',
-          vendorId);
+          selectedCardVendorId ?? '',
+          selectedCategoryId ?? '',
+          selectedSubCategoryId ?? '',
+          selectedCardVendor ?? '',
+          selectedCategory ?? '',
+          selectedSubCategory ?? '',
+          DateTime.now().millisecondsSinceEpoch);
 
       await DatabaseHelper.shared.addCardData(card);
       Navigator.pop(context);
@@ -191,16 +294,34 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
 
     try {
       String vendorId = arrVendors
-          .where((element) => element.vendorName == cardVendor)
+          .where((element) => element.vendorName == selectedCardVendor)
           .toList()
           .first
           .vendorId;
 
+      String catId = arrCategory
+          .where((element) => element.catName == selectedCategory)
+          .toList()
+          .first
+          .catId;
+
+      String subCatId = arrSubCategory
+          .where((element) => element.subCatName == selectedSubCategory)
+          .toList()
+          .first
+          .subCatId;
+
       CardModel model = widget.cardModel!;
       model.cardNumber = int.parse(cardNumberController.text);
-      model.cardVendor = cardVendor ?? '';
+      // model.amount = double.parse(cardAmountController.text);
+
       model.vendorId = vendorId;
-      model.amount = double.parse(cardAmountController.text);
+      model.catId = catId;
+      model.subCatId = subCatId;
+
+      model.vendorName = selectedCardVendor ?? '';
+      model.catName = selectedCategory ?? '';
+      model.subCatName = selectedSubCategory ?? '';
 
       await DatabaseHelper.shared.updateCardDetails(model);
 

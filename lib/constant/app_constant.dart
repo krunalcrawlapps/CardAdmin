@@ -49,6 +49,7 @@ class StringConstant {
   static const enter_subcategory_name_validation =
       'Please enter sub category name';
   static const select_category_validation = 'Please select category';
+  static const select_subcategory_validation = 'Please select sub-category';
   static const enter_currency_validation = "Please enter currency";
   static const enter_sub_amount_validation = "Please enter amount";
 }

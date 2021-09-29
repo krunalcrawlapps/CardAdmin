@@ -9,9 +9,9 @@ showLoader(BuildContext context) => showDialog(
     context: context, builder: (BuildContext context) => LoaderDialog());
 
 hideLoader(BuildContext context) {
-  if (Navigator.of(context).canPop()) {
-    Navigator.of(context).pop();
-  }
+  //if (Navigator.of(context).canPop()) {
+  Navigator.of(context).pop();
+  //}
 }
 
 String getRandomId() {

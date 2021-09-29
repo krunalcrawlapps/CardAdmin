@@ -131,13 +131,15 @@ class _CardsScreenState extends State<CardsScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 5),
-              Text(card.cardVendor),
+              Text(card.vendorName),
+              SizedBox(height: 5),
+              Text(card.catName),
+              SizedBox(height: 5),
+              Text(card.subCatName),
               SizedBox(height: 5),
               Text(card.cardNumber.toString()),
               SizedBox(height: 5),
-              Text(card.cardStatus),
-              SizedBox(height: 5),
-              Text(card.amount.toString()),
+              Text(card.cardStatus)
             ]),
       )),
     );

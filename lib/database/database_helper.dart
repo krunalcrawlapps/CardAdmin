@@ -361,12 +361,17 @@ class DatabaseHelper {
           .doc(card.cardId)
           .set({
         'card_id': card.cardId,
-        'card_vendor': card.cardVendor,
         'card_number': card.cardNumber,
-        'amount': card.amount,
+        // 'amount': card.amount,
         'card_status': card.cardStatus,
         'admin_id': card.adminId,
         'vendor_id': card.vendorId,
+        'category_id': card.catId,
+        'subCatId': card.subCatId,
+        'vendor_name': card.vendorName,
+        'category_name': card.catName,
+        'subCatName': card.subCatName,
+        'timestamp': card.timestamp,
       });
     } on FirebaseAuthException catch (error) {
       throw error.message ?? ErrorMessage.something_wrong;
@@ -390,10 +395,14 @@ class DatabaseHelper {
           .collection(FirebaseCollectionConstant.cards)
           .doc(card.cardId)
           .update({
-        'card_vendor': card.cardVendor,
+        //'amount': card.amount,
+        'card_number': card.cardNumber,
         'vendor_id': card.vendorId,
-        'amount': card.amount,
-        'card_number': card.cardNumber
+        'category_id': card.catId,
+        'subCatId': card.subCatId,
+        'vendor_name': card.vendorName,
+        'category_name': card.catName,
+        'subCatName': card.subCatName,
       });
     } on FirebaseAuthException catch (error) {
       throw error.message ?? ErrorMessage.something_wrong;
@@ -455,6 +464,35 @@ class DatabaseHelper {
     }
 
     return arrVendors;
+  }
+
+  Future<List<CategoryModel>> getAllCategory() async {
+    var collection = _fireStore.collection(FirebaseCollectionConstant.category);
+    var querySnapshot = await collection.get();
+
+    List<CategoryModel> arrCategory = [];
+    for (var doc in querySnapshot.docs) {
+      Map<String, dynamic> data = doc.data();
+      CategoryModel model = CategoryModel.fromJson(data);
+      arrCategory.add(model);
+    }
+
+    return arrCategory;
+  }
+
+  Future<List<SubCategoryModel>> getAllSubCategory() async {
+    var collection =
+        _fireStore.collection(FirebaseCollectionConstant.subcategory);
+    var querySnapshot = await collection.get();
+
+    List<SubCategoryModel> arrSubCategory = [];
+    for (var doc in querySnapshot.docs) {
+      Map<String, dynamic> data = doc.data();
+      SubCategoryModel model = SubCategoryModel.fromJson(data);
+      arrSubCategory.add(model);
+    }
+
+    return arrSubCategory;
   }
 
   //endregion
@@ -520,18 +558,5 @@ class DatabaseHelper {
     }
   }
 
-  Future<List<CategoryModel>> getAllCategory() async {
-    var collection = _fireStore.collection(FirebaseCollectionConstant.category);
-    var querySnapshot = await collection.get();
-
-    List<CategoryModel> arrCategory = [];
-    for (var doc in querySnapshot.docs) {
-      Map<String, dynamic> data = doc.data();
-      CategoryModel model = CategoryModel.fromJson(data);
-      arrCategory.add(model);
-    }
-
-    return arrCategory;
-  }
 //endregion
 }
