@@ -1,5 +1,6 @@
 import 'package:card_app_admin/screens/admin/cards/cards_screen.dart';
 import 'package:card_app_admin/screens/admin/customer/customer_screen.dart';
+import 'package:card_app_admin/screens/admin/orders/direct_charge_orders.dart';
 import 'package:card_app_admin/screens/admin/orders/orders_screen.dart';
 import 'package:card_app_admin/screens/common/profile_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     CustomerScreen(),
     CardsScreen(),
     OrdersScreen(),
+    DirectChargeOrders(),
     ProfileScreen()
   ];
 
@@ -46,6 +48,10 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart_sharp),
             label: 'Orders',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add_shopping_cart),
+            label: 'DirectCharge',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle),

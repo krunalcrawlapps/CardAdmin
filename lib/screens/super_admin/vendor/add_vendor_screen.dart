@@ -27,6 +27,8 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
   //image
   XFile? _image;
   bool isShowImageValidation = false;
+  int _radioSelected = 1;
+  bool isDirectCharge = false;
 
   @override
   void initState() {
@@ -35,6 +37,12 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
 
     if (widget.vendorModel != null) {
       nameController.text = widget.vendorModel?.vendorName ?? '';
+      isDirectCharge = widget.vendorModel?.isDirectCharge ?? false;
+      if (isDirectCharge) {
+        _radioSelected = 2;
+      } else {
+        _radioSelected = 1;
+      }
     }
   }
 
@@ -69,6 +77,36 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                     _image = file;
                   });
                 }),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Prepaid Card'),
+                    Radio(
+                      value: 1,
+                      groupValue: _radioSelected,
+                      activeColor: Colors.blue,
+                      onChanged: (value) {
+                        setState(() {
+                          _radioSelected = 1;
+                          isDirectCharge = false;
+                        });
+                      },
+                    ),
+                    Text('Direct Charge'),
+                    Radio(
+                      value: 2,
+                      groupValue: _radioSelected,
+                      activeColor: Colors.blue,
+                      onChanged: (value) {
+                        setState(() {
+                          _radioSelected = 2;
+                          isDirectCharge = true;
+                        });
+                      },
+                    )
+                  ],
+                ),
                 SizedBox(height: 50),
                 isLoading
                     ? const CircularProgressIndicator()
@@ -124,7 +162,8 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
           randomId,
           nameController.text,
           DatabaseHelper.shared.getLoggedInUserModel()?.adminId ?? '',
-          imgUrl ?? '');
+          imgUrl ?? '',
+          isDirectCharge);
       DatabaseHelper.shared.addNewVendor(vendor);
       hideLoader(context);
       showAlert(context, 'Vendor added successfully.', onClick: () {
@@ -148,6 +187,7 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
       }
 
       vendor?.vendorName = nameController.text;
+      vendor?.isDirectCharge = isDirectCharge;
       DatabaseHelper.shared.addNewVendor(vendor!);
       hideLoader(context);
       showAlert(context, 'Vendor updated successfully.', onClick: () {

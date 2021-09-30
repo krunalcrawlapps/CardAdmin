@@ -421,6 +421,7 @@ class DatabaseHelper {
         'vendor_id': vendor.vendorId,
         'vendor_name': vendor.vendorName,
         'superAdminId': vendor.superAdminId,
+        'isDirectCharge': vendor.isDirectCharge,
         'imageUrl': vendor.imageUrl
       });
     } on FirebaseAuthException catch (error) {
@@ -507,7 +508,9 @@ class DatabaseHelper {
         'category_id': category.catId,
         'category_name': category.catName,
         'vendor_id': category.vendorId,
-        'imageUrl': category.imageUrl
+        'imageUrl': category.imageUrl,
+        'amount': category.amount,
+        'currency': category.currency
       });
     } on FirebaseAuthException catch (error) {
       throw error.message ?? ErrorMessage.something_wrong;
@@ -558,5 +561,17 @@ class DatabaseHelper {
     }
   }
 
+  updateDirectChargeStatus(String orderId) async {
+    try {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.orders)
+          .doc(orderId)
+          .update({
+        'fulfilmentStatus': 'Complete',
+      });
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
 //endregion
 }

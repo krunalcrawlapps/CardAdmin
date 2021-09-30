@@ -23,6 +23,8 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
   //variables
   final _formKey = GlobalKey<FormState>();
   TextEditingController catNameController = TextEditingController();
+  TextEditingController amountController = TextEditingController();
+  TextEditingController currencyController = TextEditingController();
   String? vendorName;
 
   bool isVendorLoading = true;
@@ -51,6 +53,8 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
           .first
           .vendorName;
       catNameController.text = widget.categoryModel?.catName ?? '';
+      amountController.text = widget.categoryModel?.amount.toString() ?? '';
+      currencyController.text = widget.categoryModel?.currency ?? '';
     }
     setState(() {
       isVendorLoading = false;
@@ -112,6 +116,32 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
                             ? StringConstant.enter_vendor_validation
                             : null,
                       ),
+                    ),
+                    SizedBox(height: 20),
+                    TextFormField(
+                      controller: amountController,
+                      keyboardType: TextInputType.numberWithOptions(
+                        decimal: true,
+                        signed: false,
+                      ),
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Amount',
+                          labelStyle: TextStyle(fontSize: 15)),
+                      validator: RequiredValidator(
+                          errorText:
+                              StringConstant.enter_sub_amount_validation),
+                    ),
+                    SizedBox(height: 20),
+                    TextFormField(
+                      controller: currencyController,
+                      keyboardType: TextInputType.name,
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Currency',
+                          labelStyle: TextStyle(fontSize: 15)),
+                      validator: RequiredValidator(
+                          errorText: StringConstant.enter_currency_validation),
                     ),
                     SizedBox(height: 20),
                     getImagePickerWidget(
@@ -184,7 +214,12 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
           .first
           .vendorId;
       CategoryModel category = CategoryModel(
-          randomId, vendorId, catNameController.text, imgUrl ?? '');
+          randomId,
+          vendorId,
+          catNameController.text,
+          imgUrl ?? '',
+          double.parse(amountController.text),
+          currencyController.text);
       DatabaseHelper.shared.addUpdateCategory(category);
       hideLoader(context);
       showAlert(context, 'Category added successfully.', onClick: () {
@@ -214,6 +249,8 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
           .vendorId;
       category?.vendorId = vendorId;
       category?.catName = catNameController.text;
+      category?.amount = double.parse(amountController.text);
+      category?.currency = currencyController.text;
       DatabaseHelper.shared.addUpdateCategory(category!);
       hideLoader(context);
       showAlert(context, 'Category updated successfully.', onClick: () {
