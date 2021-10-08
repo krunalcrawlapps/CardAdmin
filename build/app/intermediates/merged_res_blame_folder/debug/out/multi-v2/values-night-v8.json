@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Volumes/Data-Storage/Flutter/card_app_flutter/card_app_admin/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Volumes/Data-Storage/Flutter/card_app_flutter/card_app_admin/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
