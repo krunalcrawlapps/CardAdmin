@@ -47,6 +47,15 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w500))
                 ]),
                 SizedBox(height: 10),
+                SizedBox(height: 10),
+                Row(children: [
+                  Text('Amount:', style: TextStyle(fontSize: 16)),
+                  SizedBox(width: 5),
+                  Text(widget.orderModel.amount.toString(),
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500))
+                ]),
+                SizedBox(height: 10),
                 Text('Ordered Cards:', style: TextStyle(fontSize: 16)),
                 getCardList()
               ]),
@@ -111,9 +120,13 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 5),
-              Text(card.vendorName),
-              Text(card.cardNumber.toString()),
+              Text('Vendor: ' + card.vendorName),
               SizedBox(height: 5),
+              Text('Category: ' + card.catName),
+              SizedBox(height: 5),
+              Text('Sub Category: ' + card.subCatName),
+              SizedBox(height: 5),
+              Text('Card Number: ' + card.cardNumber.toString()),
               // Text(card.amount.toString()),
             ]),
       )),

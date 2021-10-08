@@ -94,7 +94,8 @@ class _RefillCustomerBalanceScreenState
     setState(() {
       isLoading = true;
     });
-    await DatabaseHelper.shared.updateCustomerBalance(customer);
+    await DatabaseHelper.shared
+        .updateCustomerBalance(double.parse(balanceController.text), customer);
     setState(() {
       isLoading = false;
     });

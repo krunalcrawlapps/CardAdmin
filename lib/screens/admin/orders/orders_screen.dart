@@ -39,6 +39,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
             .where('admin_id',
                 isEqualTo:
                     DatabaseHelper.shared.getLoggedInUserModel()?.adminId)
+            .where('isDirectCharge', isEqualTo: false)
             .snapshots(),
         builder: (context, snapshot) {
           if (snapshot.hasError) {
@@ -87,6 +88,9 @@ class _OrdersScreenState extends State<OrdersScreen> {
                               SizedBox(height: 5),
                               Text('Order Date: ' +
                                   data.docs[index].data().transactionDateTime),
+                              SizedBox(height: 5),
+                              Text('Amount: ' +
+                                  data.docs[index].data().amount.toString()),
                             ]),
                       )),
                     ),

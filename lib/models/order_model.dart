@@ -9,6 +9,9 @@ class OrderModel {
   late String accountId;
   late String secAccountId;
   late String fulfilmentStatus;
+  late double amount;
+  late String vendorName;
+  late String catName;
 
   OrderModel(
       this.orderId,
@@ -19,7 +22,10 @@ class OrderModel {
       this.isDirectCharge,
       this.accountId,
       this.secAccountId,
-      this.fulfilmentStatus);
+      this.fulfilmentStatus,
+      this.amount,
+      this.vendorName,
+      this.catName);
 
   OrderModel.fromJson(Map<String, dynamic> json) {
     orderId = json['order_id'];
@@ -32,6 +38,9 @@ class OrderModel {
     accountId = json['accountId'];
     secAccountId = json['secAccountId'];
     fulfilmentStatus = json['fulfilmentStatus'];
+    amount = json['amount'];
+    vendorName = json['vendor_name'];
+    catName = json['category_name'];
   }
 
   Map<String, dynamic> toJson() {
@@ -46,6 +55,9 @@ class OrderModel {
     data['accountId'] = this.accountId;
     data['secAccountId'] = this.secAccountId;
     data['fulfilmentStatus'] = this.fulfilmentStatus;
+    data['amount'] = this.amount;
+    data['vendor_name'] = this.vendorName;
+    data['category_name'] = this.catName;
     return data;
   }
 }

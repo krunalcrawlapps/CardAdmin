@@ -35,9 +35,9 @@ class _DirectChargeOrdersState extends State<DirectChargeOrders> {
       ),
       body: StreamBuilder<QuerySnapshot<OrderModel>>(
         stream: custRef
-            // .where('admin_id',
-            //     isEqualTo:
-            //         DatabaseHelper.shared.getLoggedInUserModel()?.adminId)
+            .where('admin_id',
+                isEqualTo:
+                    DatabaseHelper.shared.getLoggedInUserModel()?.adminId)
             .where('isDirectCharge', isEqualTo: true)
             .snapshots(),
         builder: (context, snapshot) {
@@ -80,6 +80,15 @@ class _DirectChargeOrdersState extends State<DirectChargeOrders> {
                               SizedBox(height: 5),
                               Text('Order Date: ' +
                                   data.docs[index].data().transactionDateTime),
+                              SizedBox(height: 5),
+                              Text('Vendor: ' +
+                                  data.docs[index].data().vendorName),
+                              SizedBox(height: 5),
+                              Text('Category: ' +
+                                  data.docs[index].data().catName),
+                              SizedBox(height: 5),
+                              Text('Amount: ' +
+                                  data.docs[index].data().amount.toString()),
                               SizedBox(height: 5),
                               Row(children: [
                                 Expanded(

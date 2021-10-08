@@ -319,20 +319,20 @@ class DatabaseHelper {
     }
   }
 
-  updateCustomerBalance(CustomerModel customer) async {
+  updateCustomerBalance(double amount, CustomerModel customer) async {
     try {
       await _fireStore
           .collection(FirebaseCollectionConstant.customer)
           .doc(customer.custId)
           .update({'cust_balance': customer.custBalance});
 
-      await addEntryInTransaction(customer);
+      await addEntryInTransaction(amount, customer);
     } on FirebaseAuthException catch (error) {
       throw error.message ?? ErrorMessage.something_wrong;
     }
   }
 
-  addEntryInTransaction(CustomerModel customer) async {
+  addEntryInTransaction(double amount, CustomerModel customer) async {
     String randomId = getRandomId();
 
     try {
@@ -345,7 +345,8 @@ class DatabaseHelper {
             DateTimeUtils.getDateTime(DateTime.now().millisecondsSinceEpoch),
         'admin_id': getLoggedInUserModel()?.adminId ?? '',
         'cust_id': customer.custId,
-        'amount': customer.custBalance,
+        'amount': amount,
+        'newBalance': customer.custBalance,
       });
     } on FirebaseAuthException catch (error) {
       throw error.message ?? ErrorMessage.something_wrong;
