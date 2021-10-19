@@ -1,9 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.card_app_admin">
+    package="com.abs.cardadmin">
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
    <application
         android:requestLegacyExternalStorage="true"
-        android:label="CardApp-Admin"
+        android:label="OBK Card-Admin"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

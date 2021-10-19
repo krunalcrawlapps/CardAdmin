@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.abs.cardadmin"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0.0" >
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -19,11 +19,10 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="CardApp-Admin"
-        android:requestLegacyExternalStorage="true"
-        android:testOnly="true" >
+        android:label="OBK Card-Admin"
+        android:requestLegacyExternalStorage="true" >
         <activity
-            android:name="com.example.card_app_admin.MainActivity"
+            android:name="com.abs.cardadmin.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"

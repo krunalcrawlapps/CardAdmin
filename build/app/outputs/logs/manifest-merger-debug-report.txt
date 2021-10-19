@@ -62,7 +62,7 @@ INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debu
 INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 	package
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:2:5-41
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:2:5-32
 		INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debug/AndroidManifest.xml
 	android:versionName
@@ -120,10 +120,10 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/drea
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c8fd1bfddb99a7a7e21faa1397acdb4/core-1.1.0/AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:6:9-38
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:6:9-39
 	android:icon
 		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:7:9-43
-activity#com.example.card_app_admin.MainActivity
+activity#com.abs.cardadmin.MainActivity
 ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:8:9-36:20
 	android:launchMode
 		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:10:13-43

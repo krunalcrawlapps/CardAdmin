@@ -26,5 +26,9 @@
     {
         "merged": "/Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/app/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
         "source": "/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/app/intermediates/res/merged/debug/drawable_bg.png.flat",
+        "source": "/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/res/drawable/bg.png"
     }
 ]

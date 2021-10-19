@@ -42,7 +42,7 @@ android {
         applicationId "com.abs.cardadmin"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode flutterVersionCode.toInteger()
+        versionCode 2
         versionName flutterVersionName
         multiDexEnabled true
     }

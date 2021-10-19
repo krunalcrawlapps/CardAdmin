@@ -5,6 +5,7 @@ import 'package:card_app_admin/models/admin_model.dart';
 import 'package:card_app_admin/models/card_model.dart';
 import 'package:card_app_admin/models/category_model.dart';
 import 'package:card_app_admin/models/customer_model.dart';
+import 'package:card_app_admin/models/price_model.dart';
 import 'package:card_app_admin/models/subcategory_model.dart';
 import 'package:card_app_admin/models/vendor_model.dart';
 import 'package:card_app_admin/utils/date_utils.dart';
@@ -19,6 +20,7 @@ class FirebaseCollectionConstant {
   static const customer = 'Customers';
   static const cards = 'Cards';
   static const orders = 'Orders';
+  static const prices = 'Prices';
   static const vendors = 'Vendors';
   static const transactions = 'Transactions';
   static const category = 'Category';
@@ -379,6 +381,40 @@ class DatabaseHelper {
     }
   }
 
+  //region Card
+  addPricesData(PricesModel card) async {
+    try {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.prices)
+          .doc(card.pricesId)
+          .set(card.toJson());
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+
+  updatePricesData(PricesModel card) async {
+    try {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.prices)
+          .doc(card.pricesId)
+          .update(card.toJson());
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+
+  deletePrices(PricesModel model) async {
+    try {
+      await _fireStore
+          .collection(FirebaseCollectionConstant.prices)
+          .doc(model.pricesId)
+          .delete();
+    } on FirebaseAuthException catch (error) {
+      throw error.message ?? ErrorMessage.something_wrong;
+    }
+  }
+
   deleteCard(String cardId) async {
     try {
       await _fireStore
@@ -491,6 +527,24 @@ class DatabaseHelper {
     for (var doc in querySnapshot.docs) {
       Map<String, dynamic> data = doc.data();
       SubCategoryModel model = SubCategoryModel.fromJson(data);
+      arrSubCategory.add(model);
+    }
+
+    return arrSubCategory;
+  }
+
+  Future<List<CustomerModel>> getAllCustmoers() async {
+    var collection = _fireStore
+        .collection(FirebaseCollectionConstant.customer)
+        .where('admin_id',
+            isEqualTo: DatabaseHelper.shared.getLoggedInUserModel()?.adminId);
+    var querySnapshot = await collection.get();
+
+    List<CustomerModel> arrSubCategory = [];
+    for (var doc in querySnapshot.docs) {
+      Map<String, dynamic> data = doc.data();
+
+      CustomerModel model = CustomerModel.fromJson(data);
       arrSubCategory.add(model);
     }
 
