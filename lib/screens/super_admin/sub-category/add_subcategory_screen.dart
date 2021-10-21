@@ -5,6 +5,7 @@ import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/helper/image_helper.dart';
 import 'package:card_app_admin/models/category_model.dart';
 import 'package:card_app_admin/models/subcategory_model.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:card_app_admin/widgets/select_image_widget.dart';
 import 'package:flutter/material.dart';
@@ -67,9 +68,10 @@ class _AddSubCategoryScreenState extends State<AddSubCategoryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text(widget.subCategoryModel == null
-                ? 'Add Sub Category'
-                : 'Edit Sub Category')),
+            title: Text(AppTranslations.of(context)!.text(
+                widget.subCategoryModel == null
+                    ? 'Add Sub Category'
+                    : 'Edit Sub Category'))),
         body: isCategoryLoading
             ? Center(child: CircularProgressIndicator())
             : Form(
@@ -83,11 +85,13 @@ class _AddSubCategoryScreenState extends State<AddSubCategoryScreen> {
                       keyboardType: TextInputType.name,
                       decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: 'Sub Category Name',
+                          labelText: AppTranslations.of(context)!
+                              .text('Sub Category Name'),
                           labelStyle: TextStyle(fontSize: 15)),
                       validator: RequiredValidator(
-                          errorText:
-                              StringConstant.enter_subcategory_name_validation),
+                          errorText: AppTranslations.of(context)!.text(
+                              StringConstant
+                                  .enter_subcategory_name_validation)),
                     ),
                     SizedBox(height: 20),
                     TextFormField(
@@ -98,11 +102,12 @@ class _AddSubCategoryScreenState extends State<AddSubCategoryScreen> {
                       ),
                       decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: 'Amount',
+                          labelText:
+                              AppTranslations.of(context)!.text('Amount'),
                           labelStyle: TextStyle(fontSize: 15)),
                       validator: RequiredValidator(
-                          errorText:
-                              StringConstant.enter_sub_amount_validation),
+                          errorText: AppTranslations.of(context)!.text(
+                              StringConstant.enter_sub_amount_validation)),
                     ),
                     SizedBox(height: 20),
                     TextFormField(
@@ -110,10 +115,12 @@ class _AddSubCategoryScreenState extends State<AddSubCategoryScreen> {
                       keyboardType: TextInputType.name,
                       decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: 'Currency',
+                          labelText:
+                              AppTranslations.of(context)!.text('Currency'),
                           labelStyle: TextStyle(fontSize: 15)),
                       validator: RequiredValidator(
-                          errorText: StringConstant.enter_currency_validation),
+                          errorText: AppTranslations.of(context)!
+                              .text(StringConstant.enter_currency_validation)),
                     ),
                     SizedBox(height: 20),
                     Container(
@@ -129,18 +136,21 @@ class _AddSubCategoryScreenState extends State<AddSubCategoryScreen> {
                         items: arrCategory
                             .map((e) => e.catName)
                             .map((label) => DropdownMenuItem(
-                                  child: Text(label.toString()),
+                                  child: Text(AppTranslations.of(context)!
+                                      .text(label.toString())),
                                   value: label,
                                 ))
                             .toList(),
-                        hint: Text('Select Category'),
+                        hint: Text(AppTranslations.of(context)!
+                            .text('Select Category')),
                         onChanged: (value) {
                           setState(() {
                             categoryName = value;
                           });
                         },
                         validator: (value) => value == null
-                            ? StringConstant.select_category_validation
+                            ? AppTranslations.of(context)!
+                                .text(StringConstant.select_category_validation)
                             : null,
                       ),
                     ),
@@ -192,9 +202,10 @@ class _AddSubCategoryScreenState extends State<AddSubCategoryScreen> {
                                 }
                               },
                               child: Text(
-                                  widget.subCategoryModel == null
-                                      ? 'Submit'
-                                      : 'Save',
+                                  AppTranslations.of(context)!.text(
+                                      widget.subCategoryModel == null
+                                          ? 'Submit'
+                                          : 'Save'),
                                   style: TextStyle(fontSize: 18)),
                             ),
                           )

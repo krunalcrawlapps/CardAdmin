@@ -2,6 +2,7 @@ import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/customer_model.dart';
 import 'package:card_app_admin/screens/admin/customer/refill_balance_screen.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -49,9 +50,10 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text(widget.customerModel == null
-                ? 'Add Customer'
-                : 'Edit Customer')),
+            title: Text(AppTranslations.of(context)!.text(
+                widget.customerModel == null
+                    ? 'Add Customer'
+                    : 'Edit Customer'))),
         body: Form(
             key: _formKey,
             child: SingleChildScrollView(
@@ -66,20 +68,22 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                   controller: nameController,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Name',
+                      labelText: AppTranslations.of(context)!.text('Name'),
                       labelStyle: TextStyle(fontSize: 15)),
                   validator: RequiredValidator(
-                      errorText: StringConstant.enter_name_validation),
+                      errorText: AppTranslations.of(context)!
+                          .text(StringConstant.enter_name_validation)),
                 ),
                 SizedBox(height: 20),
                 TextFormField(
                   controller: addressController,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Address',
+                      labelText: AppTranslations.of(context)!.text('Address'),
                       labelStyle: TextStyle(fontSize: 15)),
                   validator: RequiredValidator(
-                      errorText: StringConstant.enter_address_validation),
+                      errorText: AppTranslations.of(context)!
+                          .text(StringConstant.enter_address_validation)),
                 ),
                 SizedBox(height: 20),
                 TextFormField(
@@ -87,13 +91,16 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                   controller: emailController,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: StringConstant.email_address,
+                      labelText: AppTranslations.of(context)!
+                          .text(StringConstant.email_address),
                       labelStyle: TextStyle(fontSize: 15)),
                   validator: MultiValidator([
                     RequiredValidator(
-                        errorText: StringConstant.enter_email_validation),
+                        errorText: AppTranslations.of(context)!
+                            .text(StringConstant.enter_email_validation)),
                     EmailValidator(
-                        errorText: StringConstant.enter_valid_email_validation)
+                        errorText: AppTranslations.of(context)!
+                            .text(StringConstant.enter_valid_email_validation))
                   ]),
                 ),
                 SizedBox(height: 20),
@@ -107,10 +114,12 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                         ),
                         decoration: InputDecoration(
                             border: OutlineInputBorder(),
-                            labelText: 'Balance',
+                            labelText:
+                                AppTranslations.of(context)!.text('Balance'),
                             labelStyle: TextStyle(fontSize: 15)),
                         validator: RequiredValidator(
-                            errorText: StringConstant.enter_balance_validation),
+                            errorText: AppTranslations.of(context)!
+                                .text(StringConstant.enter_balance_validation)),
                       )
                     : getRefillBalanceView(),
                 SizedBox(height: 20),
@@ -119,7 +128,8 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                   controller: passwordController,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: StringConstant.password,
+                      labelText: AppTranslations.of(context)!
+                          .text(StringConstant.password),
                       labelStyle: TextStyle(fontSize: 15),
                       suffixIcon: IconButton(
                         icon: Icon(
@@ -134,9 +144,11 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                       )),
                   validator: MultiValidator([
                     RequiredValidator(
-                        errorText: StringConstant.enter_pwd_validation),
+                        errorText: AppTranslations.of(context)!
+                            .text(StringConstant.enter_pwd_validation)),
                     MinLengthValidator(6,
-                        errorText: StringConstant.enter_valid_pwd_validation)
+                        errorText: AppTranslations.of(context)!
+                            .text(StringConstant.enter_valid_pwd_validation))
                   ]),
                 ),
                 SizedBox(height: 20),
@@ -145,7 +157,8 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                   controller: confirmPasswordController,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Confirm Password',
+                      labelText:
+                          AppTranslations.of(context)!.text('Confirm Password'),
                       labelStyle: TextStyle(fontSize: 15),
                       suffixIcon: IconButton(
                         icon: Icon(
@@ -162,8 +175,8 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                         },
                       )),
                   validator: (val) => MatchValidator(
-                          errorText:
-                              StringConstant.invalid_confirm_pwd_validation)
+                          errorText: AppTranslations.of(context)!.text(
+                              StringConstant.invalid_confirm_pwd_validation))
                       .validateMatch(passwordController.text, val ?? ''),
                 ),
                 SizedBox(height: 50),
@@ -186,7 +199,10 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                             }
                           },
                           child: Text(
-                              widget.customerModel == null ? 'Submit' : 'Save',
+                              AppTranslations.of(context)!.text(
+                                  widget.customerModel == null
+                                      ? 'Submit'
+                                      : 'Save'),
                               style: TextStyle(fontSize: 18)),
                         ),
                       )
@@ -206,10 +222,11 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
           ),
           decoration: InputDecoration(
               border: OutlineInputBorder(),
-              labelText: 'Balance',
+              labelText: AppTranslations.of(context)!.text('Balance'),
               labelStyle: TextStyle(fontSize: 15)),
           validator: RequiredValidator(
-              errorText: StringConstant.enter_balance_validation),
+              errorText: AppTranslations.of(context)!
+                  .text(StringConstant.enter_balance_validation)),
         ),
       ),
       SizedBox(width: 10),
@@ -226,7 +243,8 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                         RefillCustomerBalanceScreen(
                             widget.customerModel!, true)));
           },
-          child: const Text('Refill Balance', style: TextStyle(fontSize: 12)),
+          child: Text(AppTranslations.of(context)!.text('Refill Balance'),
+              style: TextStyle(fontSize: 12)),
         ),
       ),
       SizedBox(width: 10),
@@ -243,7 +261,8 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                         RefillCustomerBalanceScreen(
                             widget.customerModel!, false)));
           },
-          child: const Text('Update Balance', style: TextStyle(fontSize: 12)),
+          child: Text(AppTranslations.of(context)!.text('Update Balance'),
+              style: TextStyle(fontSize: 12)),
         ),
       )
     ]);
@@ -252,7 +271,8 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
   Widget getEditView() {
     return Row(
       children: [
-        Text('This Customer is Blocked!', style: TextStyle(color: Colors.red)),
+        Text(AppTranslations.of(context)!.text('This Customer is Blocked!'),
+            style: TextStyle(color: Colors.red)),
         SizedBox(width: 10),
         Container(
           width: 80,
@@ -267,7 +287,8 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                 Navigator.of(context).pop();
               });
             },
-            child: const Text('Unblock', style: TextStyle(fontSize: 12)),
+            child: Text(AppTranslations.of(context)!.text('Unblock'),
+                style: TextStyle(fontSize: 12)),
           ),
         )
       ],

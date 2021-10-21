@@ -2,6 +2,7 @@ import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/customer_model.dart';
 import 'package:card_app_admin/screens/admin/home_screen.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
@@ -37,7 +38,8 @@ class _RefillCustomerBalanceScreenState
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text(widget.isRefill ? 'Refill Balance' : 'Update Balance')),
+            title: Text(AppTranslations.of(context)!
+                .text(widget.isRefill ? 'Refill Balance' : 'Update Balance'))),
         body: Form(
             key: _formKey,
             child: SingleChildScrollView(
@@ -52,10 +54,11 @@ class _RefillCustomerBalanceScreenState
                   ),
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Balance',
+                      labelText: AppTranslations.of(context)!.text('Balance'),
                       labelStyle: TextStyle(fontSize: 15)),
                   validator: RequiredValidator(
-                      errorText: StringConstant.enter_balance_validation),
+                      errorText: AppTranslations.of(context)!
+                          .text(StringConstant.enter_balance_validation)),
                 ),
                 SizedBox(height: 50),
                 isLoading
@@ -82,7 +85,9 @@ class _RefillCustomerBalanceScreenState
                               updateCustomerBalance(widget.customerModel);
                             }
                           },
-                          child: Text(widget.isRefill ? 'Refill' : 'Update',
+                          child: Text(
+                              AppTranslations.of(context)!
+                                  .text(widget.isRefill ? 'Refill' : 'Update'),
                               style: TextStyle(fontSize: 18)),
                         ),
                       )

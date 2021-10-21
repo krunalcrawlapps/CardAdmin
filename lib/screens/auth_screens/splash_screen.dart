@@ -3,6 +3,7 @@ import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/admin_model.dart';
 import 'package:card_app_admin/screens/admin/home_screen.dart';
 import 'package:card_app_admin/screens/super_admin/super_admin_home.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +42,8 @@ class _SplashScreenState extends State<SplashScreen> {
                 fit: BoxFit.scaleDown, width: 80, height: 80),
             SizedBox(height: 30),
             Text(
-              'Welcome To Card app!',
+              AppTranslations.of(context)!
+                            .text('Welcome To Card app!'),
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
             ),
             SizedBox(height: 30),
@@ -49,7 +51,8 @@ class _SplashScreenState extends State<SplashScreen> {
                 ? CircularProgressIndicator()
                 : isBlock
                     ? Text(
-                        'Your account has been blocked!. Please contact super admin.',
+                        AppTranslations.of(context)!
+                            .text('Your account has been blocked!. Please contact super admin.'),
                         style: TextStyle(color: Colors.red))
                     : Container()
           ])),

@@ -1,9 +1,13 @@
+import 'dart:convert';
+import 'dart:typed_data';
+
 import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/card_model.dart';
 import 'package:card_app_admin/models/category_model.dart';
 import 'package:card_app_admin/models/subcategory_model.dart';
 import 'package:card_app_admin/models/vendor_model.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
@@ -60,7 +64,17 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
       selectedSubCategory = widget.cardModel?.subCatName;
       selectedSubCategoryId = widget.cardModel?.subCatId;
 
-      cardNumberController.text = widget.cardModel?.cardNumber.toString() ?? '';
+      String cardNumber = "";
+      if (widget.cardModel?.cardNumber is int) {
+        cardNumber = widget.cardModel?.cardNumber.toString() ?? "";
+      } else {
+        Latin1Decoder latin1Decoder = Latin1Decoder();
+
+        cardNumber = latin1Decoder.convert(
+            base64Decode(widget.cardModel?.cardNumber.toString() ?? ""));
+      }
+
+      cardNumberController.text = cardNumber;
       // cardAmountController.text = widget.cardModel?.amount.toString() ?? '';
     }
     setState(() {
@@ -73,7 +87,8 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text(widget.cardModel == null ? 'Add Card' : 'Edit Card')),
+            title: Text(AppTranslations.of(context)!
+                .text(widget.cardModel == null ? 'Add Card' : 'Edit Card'))),
         body: isVendorLoading
             ? Center(child: CircularProgressIndicator())
             : Form(
@@ -85,17 +100,18 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
                     TextFormField(
                       controller: cardNumberController,
                       keyboardType: TextInputType.number,
-                      maxLength: 10,
                       decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: 'Card Number',
+                          labelText:
+                              AppTranslations.of(context)!.text('Card Number'),
                           labelStyle: TextStyle(fontSize: 15)),
                       validator: MultiValidator([
                         RequiredValidator(
-                            errorText: StringConstant.enter_number_validation),
-                        MinLengthValidator(10,
-                            errorText:
-                                StringConstant.enter_valid_number_validation)
+                            errorText: AppTranslations.of(context)!
+                                .text(StringConstant.enter_number_validation)),
+                        MinLengthValidator(14,
+                            errorText: AppTranslations.of(context)!.text(
+                                StringConstant.enter_valid_number_validation))
                       ]),
                     ),
                     SizedBox(height: 20),
@@ -129,7 +145,8 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
                                   value: label,
                                 ))
                             .toList(),
-                        hint: Text('Select Card Vendor'),
+                        hint: Text(AppTranslations.of(context)!
+                            .text('Select Card Vendor')),
                         onChanged: (value) {
                           setState(() {
                             selectedCardVendor = value;
@@ -143,7 +160,8 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
                           });
                         },
                         validator: (value) => value == null
-                            ? StringConstant.enter_vendor_validation
+                            ? AppTranslations.of(context)!
+                                .text(StringConstant.enter_vendor_validation)
                             : null,
                       ),
                     ),
@@ -164,11 +182,13 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
                             .toList()
                             .map((e) => e.catName)
                             .map((label) => DropdownMenuItem(
-                                  child: Text(label.toString()),
+                                  child: Text(AppTranslations.of(context)!
+                                      .text(label.toString())),
                                   value: label,
                                 ))
                             .toList(),
-                        hint: Text('Select Card Category'),
+                        hint: Text(AppTranslations.of(context)!
+                            .text('Select Card Category')),
                         onChanged: (value) {
                           setState(() {
                             selectedCategory = value;
@@ -182,7 +202,8 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
                           });
                         },
                         validator: (value) => value == null
-                            ? StringConstant.select_category_validation
+                            ? AppTranslations.of(context)!
+                                .text(StringConstant.select_category_validation)
                             : null,
                       ),
                     ),
@@ -203,11 +224,13 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
                             .toList()
                             .map((e) => e.subCatName)
                             .map((label) => DropdownMenuItem(
-                                  child: Text(label.toString()),
+                                  child: Text(AppTranslations.of(context)!
+                                      .text(label.toString())),
                                   value: label,
                                 ))
                             .toList(),
-                        hint: Text('Select Card Vendor'),
+                        hint: Text(AppTranslations.of(context)!
+                            .text('Select Card Vendor')),
                         onChanged: (value) {
                           setState(() {
                             selectedSubCategory = value;
@@ -221,7 +244,8 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
                           });
                         },
                         validator: (value) => value == null
-                            ? StringConstant.select_subcategory_validation
+                            ? AppTranslations.of(context)!.text(
+                                StringConstant.select_subcategory_validation)
                             : null,
                       ),
                     ),
@@ -246,7 +270,10 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
                                 }
                               },
                               child: Text(
-                                  widget.cardModel == null ? 'Submit' : 'Save',
+                                  AppTranslations.of(context)!.text(
+                                      widget.cardModel == null
+                                          ? 'Submit'
+                                          : 'Save'),
                                   style: TextStyle(fontSize: 18)),
                             ),
                           )
@@ -260,9 +287,11 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
     });
 
     try {
+      Latin1Encoder latin1Encoder = Latin1Encoder();
+      Uint8List cardNumber = latin1Encoder.convert(cardNumberController.text);
       CardModel card = CardModel(
           getRandomId(),
-          int.parse(cardNumberController.text),
+          base64Encode(cardNumber),
           // double.parse(cardAmountController.text),
           CardStatus.available,
           DatabaseHelper.shared.getLoggedInUserModel()?.adminId ?? '',
@@ -312,7 +341,10 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
           .subCatId;
 
       CardModel model = widget.cardModel!;
-      model.cardNumber = int.parse(cardNumberController.text);
+
+      Latin1Encoder latin1Encoder = Latin1Encoder();
+      Uint8List cardNumber = latin1Encoder.convert(cardNumberController.text);
+      model.cardNumber = base64Encode(cardNumber);
       // model.amount = double.parse(cardAmountController.text);
 
       model.vendorId = vendorId;

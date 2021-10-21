@@ -1,7 +1,10 @@
+import 'dart:convert';
+
 import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/card_model.dart';
 import 'package:card_app_admin/screens/admin/cards/add_cards_screen.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +28,7 @@ class _CardsScreenState extends State<CardsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(StringConstant.cards),
+        title: Text(AppTranslations.of(context)!.text(StringConstant.cards)),
         actions: [
           IconButton(
               onPressed: () {
@@ -62,7 +65,8 @@ class _CardsScreenState extends State<CardsScreen> {
 
           if (data.size == 0) {
             return Center(
-              child: Text(StringConstant.no_data_found),
+              child: Text(AppTranslations.of(context)!
+                  .text(StringConstant.no_data_found)),
             );
           }
 
@@ -121,6 +125,14 @@ class _CardsScreenState extends State<CardsScreen> {
   }
 
   Widget getCard(CardModel card) {
+    String cardNumber = "";
+    if (card.cardNumber is int) {
+      cardNumber = card.cardNumber.toString();
+    } else {
+      Latin1Decoder latin1Decoder = Latin1Decoder();
+
+      cardNumber = latin1Decoder.convert(base64Decode(card.cardNumber));
+    }
     return Container(
       width: double.infinity,
       child: Card(
@@ -131,15 +143,15 @@ class _CardsScreenState extends State<CardsScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 5),
-              Text(card.vendorName),
+              Text(AppTranslations.of(context)!.text(card.vendorName)),
               SizedBox(height: 5),
-              Text(card.catName),
+              Text(AppTranslations.of(context)!.text(card.catName)),
               SizedBox(height: 5),
-              Text(card.subCatName),
+              Text(AppTranslations.of(context)!.text(card.subCatName)),
               SizedBox(height: 5),
-              Text(card.cardNumber.toString()),
+              Text(AppTranslations.of(context)!.text(cardNumber)),
               SizedBox(height: 5),
-              Text(card.cardStatus)
+              Text(AppTranslations.of(context)!.text(card.cardStatus))
             ]),
       )),
     );

@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -23,7 +24,8 @@ class ImageUploadHelper {
                 children: <Widget>[
                   new ListTile(
                       leading: new Icon(Icons.photo_library),
-                      title: new Text('Photo Library'),
+                      title: new Text(AppTranslations.of(context)!
+                            .text('Photo Library')),
                       onTap: () async {
                         Navigator.of(context).pop();
                         XFile? file = await _imgFromGallery();
@@ -31,7 +33,8 @@ class ImageUploadHelper {
                       }),
                   new ListTile(
                     leading: new Icon(Icons.photo_camera),
-                    title: new Text('Camera'),
+                    title: new Text(AppTranslations.of(context)!
+                            .text('Camera')),
                     onTap: () async {
                       Navigator.of(context).pop();
                       XFile? file = await _imgFromCamera();

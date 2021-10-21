@@ -5,6 +5,7 @@ import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/helper/image_helper.dart';
 import 'package:card_app_admin/models/category_model.dart';
 import 'package:card_app_admin/models/vendor_model.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:card_app_admin/widgets/select_image_widget.dart';
 import 'package:flutter/material.dart';
@@ -66,9 +67,10 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text(widget.categoryModel == null
-                ? 'Add Category'
-                : 'Edit Category')),
+            title: Text(AppTranslations.of(context)!.text(
+                widget.categoryModel == null
+                    ? 'Add Category'
+                    : 'Edit Category'))),
         body: isVendorLoading
             ? Center(child: CircularProgressIndicator())
             : Form(
@@ -82,11 +84,12 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
                       keyboardType: TextInputType.name,
                       decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: 'Category Name',
+                          labelText: AppTranslations.of(context)!
+                              .text('Category Name'),
                           labelStyle: TextStyle(fontSize: 15)),
                       validator: RequiredValidator(
-                          errorText:
-                              StringConstant.enter_category_name_validation),
+                          errorText: AppTranslations.of(context)!.text(
+                              StringConstant.enter_category_name_validation)),
                     ),
                     SizedBox(height: 20),
                     Container(
@@ -102,18 +105,21 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
                         items: arrVendors
                             .map((e) => e.vendorName)
                             .map((label) => DropdownMenuItem(
-                                  child: Text(label.toString()),
+                                  child: Text(AppTranslations.of(context)!
+                                      .text(label.toString())),
                                   value: label,
                                 ))
                             .toList(),
-                        hint: Text('Select Vendor'),
+                        hint: Text(
+                            AppTranslations.of(context)!.text('Select Vendor')),
                         onChanged: (value) {
                           setState(() {
                             vendorName = value;
                           });
                         },
                         validator: (value) => value == null
-                            ? StringConstant.enter_vendor_validation
+                            ? AppTranslations.of(context)!
+                                .text(StringConstant.enter_vendor_validation)
                             : null,
                       ),
                     ),
@@ -126,11 +132,12 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
                       ),
                       decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: 'Amount',
+                          labelText:
+                              AppTranslations.of(context)!.text('Amount'),
                           labelStyle: TextStyle(fontSize: 15)),
                       validator: RequiredValidator(
-                          errorText:
-                              StringConstant.enter_sub_amount_validation),
+                          errorText: AppTranslations.of(context)!.text(
+                              StringConstant.enter_sub_amount_validation)),
                     ),
                     SizedBox(height: 20),
                     TextFormField(
@@ -138,10 +145,12 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
                       keyboardType: TextInputType.name,
                       decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: 'Currency',
+                          labelText:
+                              AppTranslations.of(context)!.text('Currency'),
                           labelStyle: TextStyle(fontSize: 15)),
                       validator: RequiredValidator(
-                          errorText: StringConstant.enter_currency_validation),
+                          errorText: AppTranslations.of(context)!
+                              .text(StringConstant.enter_currency_validation)),
                     ),
                     SizedBox(height: 20),
                     getImagePickerWidget(
@@ -191,9 +200,10 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
                                 }
                               },
                               child: Text(
-                                  widget.categoryModel == null
-                                      ? 'Submit'
-                                      : 'Save',
+                                  AppTranslations.of(context)!.text(
+                                      widget.categoryModel == null
+                                          ? 'Submit'
+                                          : 'Save'),
                                   style: TextStyle(fontSize: 18)),
                             ),
                           )

@@ -3,6 +3,7 @@ import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/admin_model.dart';
 import 'package:card_app_admin/screens/common/profile_screen.dart';
 import 'package:card_app_admin/screens/super_admin/admin/add_admin_screen.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,8 @@ class _AdminListScreenState extends State<AdminListScreen> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: Text(StringConstant.admins),
+        title: Text(AppTranslations.of(context)!
+                            .text(StringConstant.admins)),
         actions: [
           IconButton(
               onPressed: () {
@@ -65,7 +67,8 @@ class _AdminListScreenState extends State<AdminListScreen> {
 
           if (data.size == 0) {
             return Center(
-              child: Text(StringConstant.no_data_found),
+              child: Text(AppTranslations.of(context)!
+                            .text(StringConstant.no_data_found)),
             );
           }
 

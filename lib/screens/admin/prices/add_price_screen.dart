@@ -7,6 +7,7 @@ import 'package:card_app_admin/models/price_model.dart';
 import 'package:card_app_admin/models/subcategory_model.dart';
 import 'package:card_app_admin/models/vendor_model.dart';
 import 'package:card_app_admin/utils/date_utils.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
@@ -84,8 +85,8 @@ class _AddPricesScreenState extends State<AddPricesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title:
-                Text(widget.cardModel == null ? 'Add Prices' : 'Edit Prices')),
+            title: Text(AppTranslations.of(context)!.text(
+                widget.cardModel == null ? 'Add Prices' : 'Edit Prices'))),
         body: isVendorLoading
             ? Center(child: CircularProgressIndicator())
             : Form(
@@ -107,11 +108,13 @@ class _AddPricesScreenState extends State<AddPricesScreen> {
                         items: arrVendors
                             .map((e) => e.vendorName)
                             .map((label) => DropdownMenuItem(
-                                  child: Text(label.toString()),
+                                  child: Text(AppTranslations.of(context)!
+                                      .text(label.toString())),
                                   value: label,
                                 ))
                             .toList(),
-                        hint: Text('Select Card Vendor'),
+                        hint: Text(AppTranslations.of(context)!
+                            .text('Select Card Vendor')),
                         onChanged: (value) {
                           setState(() {
                             selectedCardVendor = value;
@@ -125,7 +128,8 @@ class _AddPricesScreenState extends State<AddPricesScreen> {
                           });
                         },
                         validator: (value) => value == null
-                            ? StringConstant.enter_vendor_validation
+                            ? AppTranslations.of(context)!
+                                .text(StringConstant.enter_vendor_validation)
                             : null,
                       ),
                     ),
@@ -152,11 +156,13 @@ class _AddPricesScreenState extends State<AddPricesScreen> {
                             .toList()
                             .map((e) => e.catName)
                             .map((label) => DropdownMenuItem(
-                                  child: Text(label.toString()),
+                                  child: Text(AppTranslations.of(context)!
+                                      .text(label.toString())),
                                   value: label,
                                 ))
                             .toList(),
-                        hint: Text('Select Card Category'),
+                        hint: Text(AppTranslations.of(context)!
+                            .text('Select Card Category')),
                         onChanged: (value) {
                           setState(() {
                             selectedCategory = value;
@@ -170,7 +176,8 @@ class _AddPricesScreenState extends State<AddPricesScreen> {
                           });
                         },
                         validator: (value) => value == null
-                            ? StringConstant.select_category_validation
+                            ? AppTranslations.of(context)!
+                                .text(StringConstant.select_category_validation)
                             : null,
                       ),
                     ),
@@ -197,11 +204,13 @@ class _AddPricesScreenState extends State<AddPricesScreen> {
                             .toList()
                             .map((e) => e.subCatName)
                             .map((label) => DropdownMenuItem(
-                                  child: Text(label.toString()),
+                                  child: Text(AppTranslations.of(context)!
+                                      .text(label.toString())),
                                   value: label,
                                 ))
                             .toList(),
-                        hint: Text('Select Card Sub Category'),
+                        hint: Text(AppTranslations.of(context)!
+                            .text('Select Card Sub Category')),
                         onChanged: (value) {
                           setState(() {
                             selectedSubCategory = value;
@@ -215,7 +224,8 @@ class _AddPricesScreenState extends State<AddPricesScreen> {
                           });
                         },
                         validator: (value) => value == null
-                            ? StringConstant.select_subcategory_validation
+                            ? AppTranslations.of(context)!.text(
+                                StringConstant.select_subcategory_validation)
                             : null,
                       ),
                     ),
@@ -233,11 +243,13 @@ class _AddPricesScreenState extends State<AddPricesScreen> {
                         items: custmoers
                             .map((e) => e.custName)
                             .map((label) => DropdownMenuItem(
-                                  child: Text(label.toString()),
+                                  child: Text(AppTranslations.of(context)!
+                                      .text(label.toString())),
                                   value: label,
                                 ))
                             .toList(),
-                        hint: Text('Select Custmoer'),
+                        hint: Text(AppTranslations.of(context)!
+                            .text('Select Custmoer')),
                         onChanged: (value) {
                           setState(() {
                             selectedCustmoer = value;
@@ -252,7 +264,8 @@ class _AddPricesScreenState extends State<AddPricesScreen> {
                           });
                         },
                         validator: (value) => value == null
-                            ? StringConstant.select_customer_validation
+                            ? AppTranslations.of(context)!
+                                .text(StringConstant.select_customer_validation)
                             : null,
                       ),
                     ),
@@ -262,11 +275,13 @@ class _AddPricesScreenState extends State<AddPricesScreen> {
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: 'Amount',
+                          labelText:
+                              AppTranslations.of(context)!.text('Amount'),
                           labelStyle: TextStyle(fontSize: 15)),
                       validator: MultiValidator([
                         RequiredValidator(
-                            errorText: StringConstant.enter_amount_validation),
+                            errorText: AppTranslations.of(context)!
+                                .text(StringConstant.enter_amount_validation)),
                       ]),
                     ),
                     SizedBox(height: 20),
@@ -274,11 +289,13 @@ class _AddPricesScreenState extends State<AddPricesScreen> {
                       controller: amountCurrencyController,
                       decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: 'Currency',
+                          labelText:
+                              AppTranslations.of(context)!.text('Currency'),
                           labelStyle: TextStyle(fontSize: 15)),
                       validator: MultiValidator([
                         RequiredValidator(
-                            errorText: StringConstant.enter_number_validation),
+                            errorText: AppTranslations.of(context)!
+                                .text(StringConstant.enter_number_validation)),
                       ]),
                     ),
                     SizedBox(height: 30),
@@ -302,7 +319,10 @@ class _AddPricesScreenState extends State<AddPricesScreen> {
                                 }
                               },
                               child: Text(
-                                  widget.cardModel == null ? 'Submit' : 'Save',
+                                  AppTranslations.of(context)!.text(
+                                      widget.cardModel == null
+                                          ? 'Submit'
+                                          : 'Save'),
                                   style: TextStyle(fontSize: 18)),
                             ),
                           )

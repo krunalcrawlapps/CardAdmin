@@ -1,7 +1,8 @@
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/screens/auth_screens/login_screen.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/widgets/loader_widget.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
@@ -24,11 +25,11 @@ showAlert(BuildContext context, String msg, {Function? onClick}) {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text("Alert"),
-          content: Text(msg),
+          title: Text(AppTranslations.of(context)!.text("Alert")),
+          content: Text(AppTranslations.of(context)!.text(msg)),
           actions: [
             ElevatedButton(
-              child: const Text("Ok"),
+              child: Text(AppTranslations.of(context)!.text("Ok")),
               onPressed: () {
                 Navigator.of(context).pop();
 
@@ -47,8 +48,9 @@ showLogoutDialog(BuildContext context) async {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: const Text("Confirm"),
-        content: const Text("Are you sure you want to logout?"),
+        title: Text(AppTranslations.of(context)!.text("Confirm")),
+        content: Text(AppTranslations.of(context)!
+            .text("Are you sure you want to logout?")),
         actions: <Widget>[
           ElevatedButton(
               onPressed: () {
@@ -57,10 +59,10 @@ showLogoutDialog(BuildContext context) async {
                     MaterialPageRoute(builder: (context) => LoginScreen()),
                     (Route<dynamic> route) => false);
               },
-              child: const Text("YES")),
+              child: Text(AppTranslations.of(context)!.text("YES"))),
           ElevatedButton(
             onPressed: () => Navigator.of(context).pop(false),
-            child: const Text("NO"),
+            child: Text(AppTranslations.of(context)!.text("NO")),
           ),
         ],
       );
@@ -74,18 +76,18 @@ Future<bool> showConfirmationDialog(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: const Text("Confirm"),
-        content: Text(message),
+        title: Text(AppTranslations.of(context)!.text("Confirm")),
+        content: Text(AppTranslations.of(context)!.text(message)),
         actions: <Widget>[
           ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pop(true);
                 onConfirm();
               },
-              child: const Text("Yes")),
+              child: Text(AppTranslations.of(context)!.text("Yes"))),
           ElevatedButton(
             onPressed: () => Navigator.of(context).pop(false),
-            child: const Text("No"),
+            child: Text(AppTranslations.of(context)!.text("No")),
           ),
         ],
       );

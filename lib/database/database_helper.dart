@@ -42,6 +42,15 @@ class DatabaseHelper {
     pref = await SharedPreferences.getInstance();
   }
 
+  /// Current language
+  saveLanguage(String language) async {
+    pref.setString(SharedPrefConstant.language, language);
+  }
+
+  String? get getLangauge {
+    return pref.getString(SharedPrefConstant.language);
+  }
+
   //region Login, Register, ChangePwd
   Future<User?> registerUser(String email, String password) async {
     try {
@@ -479,12 +488,11 @@ class DatabaseHelper {
 
   deleteVendor(VendorModel model) async {
     try {
-      await FirebaseStorage.instance.refFromURL(model.imageUrl).delete();
-
       await _fireStore
           .collection(FirebaseCollectionConstant.vendors)
           .doc(model.vendorId)
           .delete();
+      await FirebaseStorage.instance.refFromURL(model.imageUrl).delete();
     } on FirebaseAuthException catch (error) {
       throw error.message ?? ErrorMessage.something_wrong;
     }
@@ -574,12 +582,11 @@ class DatabaseHelper {
 
   deleteCategory(CategoryModel model) async {
     try {
-      await FirebaseStorage.instance.refFromURL(model.imageUrl).delete();
-
       await _fireStore
           .collection(FirebaseCollectionConstant.category)
           .doc(model.catId)
           .delete();
+      await FirebaseStorage.instance.refFromURL(model.imageUrl).delete();
     } on FirebaseAuthException catch (error) {
       throw error.message ?? ErrorMessage.something_wrong;
     }
@@ -605,14 +612,15 @@ class DatabaseHelper {
 
   deleteSubCategory(SubCategoryModel model) async {
     try {
-      await FirebaseStorage.instance.refFromURL(model.imageUrl).delete();
-
       await _fireStore
           .collection(FirebaseCollectionConstant.subcategory)
           .doc(model.subCatId)
           .delete();
+      FirebaseStorage.instance.refFromURL(model.imageUrl).delete();
     } on FirebaseAuthException catch (error) {
       throw error.message ?? ErrorMessage.something_wrong;
+    } catch (e) {
+      rethrow;
     }
   }
 

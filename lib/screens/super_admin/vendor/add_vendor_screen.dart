@@ -4,6 +4,7 @@ import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/helper/image_helper.dart';
 import 'package:card_app_admin/models/vendor_model.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:card_app_admin/widgets/select_image_widget.dart';
 import 'package:flutter/material.dart';
@@ -50,8 +51,8 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text(
-                widget.vendorModel != null ? 'Edit Vendor' : 'Add Vendor')),
+            title: Text(AppTranslations.of(context)!.text(
+                widget.vendorModel != null ? 'Edit Vendor' : 'Add Vendor'))),
         body: Form(
             key: _formKey,
             child: SingleChildScrollView(
@@ -62,10 +63,11 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                   controller: nameController,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Name',
+                      labelText: AppTranslations.of(context)!.text('Name'),
                       labelStyle: TextStyle(fontSize: 15)),
                   validator: RequiredValidator(
-                      errorText: StringConstant.enter_name_validation),
+                      errorText: AppTranslations.of(context)!
+                          .text(StringConstant.enter_name_validation)),
                 ),
                 SizedBox(height: 20),
                 getImagePickerWidget(
@@ -81,7 +83,7 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Prepaid Card'),
+                    Text(AppTranslations.of(context)!.text('Prepaid Card')),
                     Radio(
                       value: 1,
                       groupValue: _radioSelected,
@@ -93,7 +95,7 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                         });
                       },
                     ),
-                    Text('Direct Charge'),
+                    Text(AppTranslations.of(context)!.text('Direct Charge')),
                     Radio(
                       value: 2,
                       groupValue: _radioSelected,
@@ -144,7 +146,10 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                             }
                           },
                           child: Text(
-                              widget.vendorModel != null ? 'Save' : 'Submit',
+                              AppTranslations.of(context)!.text(
+                                  widget.vendorModel != null
+                                      ? 'Save'
+                                      : 'Submit'),
                               style: TextStyle(fontSize: 18)),
                         ),
                       )

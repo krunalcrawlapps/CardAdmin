@@ -3,6 +3,7 @@ import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/category_model.dart';
 import 'package:card_app_admin/models/subcategory_model.dart';
 import 'package:card_app_admin/screens/super_admin/sub-category/add_subcategory_screen.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +39,8 @@ class _SubCategoryListScreenState extends State<SubCategoryListScreen> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: Text('Sub Category'),
+        title: Text(AppTranslations.of(context)!
+                            .text('Sub Category')),
         actions: [
           IconButton(
               onPressed: () {
@@ -61,7 +63,8 @@ class _SubCategoryListScreenState extends State<SubCategoryListScreen> {
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return Center(
-              child: Text(snapshot.error.toString()),
+              child: Text(AppTranslations.of(context)!
+                            .text(snapshot.error.toString())),
             );
           }
           if (!snapshot.hasData) {
@@ -75,6 +78,7 @@ class _SubCategoryListScreenState extends State<SubCategoryListScreen> {
 
           return ListView.builder(
             itemCount: data.size,
+            shrinkWrap: true,
             itemBuilder: (context, index) {
               return Padding(
                   padding: EdgeInsets.fromLTRB(8, 8, 8, 0),

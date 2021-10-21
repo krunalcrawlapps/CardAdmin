@@ -2,6 +2,7 @@ import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/vendor_model.dart';
 import 'package:card_app_admin/screens/super_admin/vendor/add_vendor_screen.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,8 @@ class _VendorListScreenState extends State<VendorListScreen> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: Text('Vendors'),
+        title: Text(AppTranslations.of(context)!
+                            .text('Vendors')),
         actions: [
           IconButton(
               onPressed: () {
@@ -55,7 +57,8 @@ class _VendorListScreenState extends State<VendorListScreen> {
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return Center(
-              child: Text(snapshot.error.toString()),
+              child: Text(AppTranslations.of(context)!
+                            .text(snapshot.error.toString())),
             );
           }
           if (!snapshot.hasData) {
@@ -79,10 +82,10 @@ class _VendorListScreenState extends State<VendorListScreen> {
                     confirmDismiss: (DismissDirection direction) async {
                       showConfirmationDialog(
                           context, StringConstant.confirm_delete, () async {
-                        showLoader(context);
+                        // showLoader(context);
                         await DatabaseHelper.shared
                             .deleteVendor(data.docs[index].data());
-                        hideLoader(context);
+                        // hideLoader(context);
                       });
                     },
                     onDismissed: (direction) {},

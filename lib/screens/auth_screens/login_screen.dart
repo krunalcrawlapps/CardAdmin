@@ -3,6 +3,7 @@ import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/admin_model.dart';
 import 'package:card_app_admin/screens/admin/home_screen.dart';
 import 'package:card_app_admin/screens/super_admin/super_admin_home.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,9 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text(StringConstant.login)),
+        appBar: AppBar(
+            title:
+                Text(AppTranslations.of(context)!.text(StringConstant.login))),
         body: Center(
           child: Form(
               key: _formKey,
@@ -45,14 +48,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     controller: emailController,
                     decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        labelText: StringConstant.email_address,
+                        labelText: AppTranslations.of(context)!
+                            .text(StringConstant.email_address),
                         labelStyle: TextStyle(fontSize: 15)),
                     validator: MultiValidator([
                       RequiredValidator(
-                          errorText: StringConstant.enter_email_validation),
+                          errorText: AppTranslations.of(context)!
+                              .text(StringConstant.enter_email_validation)),
                       EmailValidator(
-                          errorText:
-                              StringConstant.enter_valid_email_validation)
+                          errorText: AppTranslations.of(context)!.text(
+                              StringConstant.enter_valid_email_validation))
                     ]),
                   ),
                 ),
@@ -63,7 +68,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     controller: passwordController,
                     decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        labelText: StringConstant.password,
+                        labelText: AppTranslations.of(context)!
+                            .text(StringConstant.password),
                         labelStyle: TextStyle(fontSize: 15),
                         suffixIcon: IconButton(
                           icon: Icon(
@@ -82,7 +88,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         )),
                     // The validator receives the text that the user has entered.
                     validator: RequiredValidator(
-                        errorText: StringConstant.enter_pwd_validation),
+                        errorText: AppTranslations.of(context)!
+                            .text(StringConstant.enter_pwd_validation)),
                   ),
                 ),
                 Padding(
@@ -102,7 +109,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                 _doLogin(context);
                               }
                             },
-                            child: const Text('Submit',
+                            child: Text(
+                                AppTranslations.of(context)!.text('Submit'),
                                 style: TextStyle(fontSize: 18)),
                           ),
                         ),

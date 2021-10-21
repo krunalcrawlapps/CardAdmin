@@ -1,6 +1,6 @@
 class CardModel {
   late String cardId;
-  late int cardNumber;
+  late dynamic cardNumber;
   // late double amount;
   late String cardStatus;
   late String adminId;

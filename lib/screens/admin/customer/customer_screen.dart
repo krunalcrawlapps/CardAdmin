@@ -2,6 +2,7 @@ import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/customer_model.dart';
 import 'package:card_app_admin/screens/admin/customer/add_customer_screen.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,8 @@ class _CustomerScreenState extends State<CustomerScreen> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: Text(StringConstant.customers),
+        title: Text(AppTranslations.of(context)!
+                            .text(StringConstant.customers)),
         actions: [
           IconButton(
               onPressed: () {
@@ -65,7 +67,8 @@ class _CustomerScreenState extends State<CustomerScreen> {
 
           if (data.size == 0) {
             return Center(
-              child: Text(StringConstant.no_data_found),
+              child: Text(AppTranslations.of(context)!
+                            .text(StringConstant.no_data_found)),
             );
           }
 

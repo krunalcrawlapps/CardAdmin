@@ -38,7 +38,7 @@ class StringConstant {
   //cards
   static const cards = 'Cards';
   static const enter_number_validation = 'Please enter card number';
-  static const enter_valid_number_validation = 'Card number should be 10 digit';
+  static const enter_valid_number_validation = 'Card number should be 14 digit';
   static const enter_vendor_validation = 'Please select vendor';
   static const enter_amount_validation = 'Please enter card amount';
 
@@ -65,4 +65,5 @@ class ImageConstant {
 
 class SharedPrefConstant {
   static const user_data = 'userData';
+  static const language = 'language';
 }

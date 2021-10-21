@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:card_app_admin/helper/image_helper.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -45,7 +46,8 @@ Widget getImagePickerWidget(BuildContext context, XFile? image,
                           height: 60,
                           alignment: Alignment.centerLeft,
                           child: Row(children: [
-                            Text('Select Image',
+                            Text(AppTranslations.of(context)!
+                            .text('Select Image'),
                                 style: TextStyle(
                                     color: Colors.black54, fontSize: 16)),
                             Spacer(),
@@ -61,17 +63,18 @@ Widget getImagePickerWidget(BuildContext context, XFile? image,
                   onPickImage(file);
                 });
               })),
-      if (isShowValidation) _getImageValidation()
+      if (isShowValidation) _getImageValidation(context)
     ],
   );
 }
 
-Widget _getImageValidation() {
+Widget _getImageValidation(BuildContext context) {
   return Column(children: [
     SizedBox(height: 5),
     Align(
       alignment: Alignment.centerLeft,
-      child: Text('  Please select image',
+      child: Text("  "+AppTranslations.of(context)!
+                            .text('Please select image'),
           style: TextStyle(color: Colors.red, fontSize: 12)),
     )
   ]);

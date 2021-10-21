@@ -2,9 +2,11 @@ import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/order_model.dart';
 import 'package:card_app_admin/models/price_model.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import 'add_price_screen.dart';
 
@@ -28,7 +30,7 @@ class _PricesScreenState extends State<PricesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Prices'),
+        title: Text(AppTranslations.of(context)!.text('Prices')),
         actions: [
           IconButton(
               onPressed: () {
@@ -54,7 +56,8 @@ class _PricesScreenState extends State<PricesScreen> {
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return Center(
-              child: Text(snapshot.error.toString()),
+              child: Text(
+                  AppTranslations.of(context)!.text(snapshot.error.toString())),
             );
           }
           if (!snapshot.hasData) {
@@ -65,7 +68,8 @@ class _PricesScreenState extends State<PricesScreen> {
 
           if (data.size == 0) {
             return Center(
-              child: Text(StringConstant.no_data_found),
+              child: Text(AppTranslations.of(context)!
+                  .text(StringConstant.no_data_found)),
             );
           }
 
@@ -76,9 +80,14 @@ class _PricesScreenState extends State<PricesScreen> {
                 direction: DismissDirection.endToStart,
                 resizeDuration: Duration(milliseconds: 200),
                 key: ObjectKey(data.docs.elementAt(index)),
-                onDismissed: (direction) {
-                  DatabaseHelper.shared.deletePrices(data.docs[index].data());
+                confirmDismiss: (direction) async {
+                  showConfirmationDialog(context, StringConstant.confirm_delete,
+                      () async {
+                    await DatabaseHelper.shared
+                        .deletePrices(data.docs[index].data());
+                  });
                 },
+                onDismissed: (direction) {},
                 background: Container(
                   padding: EdgeInsets.only(left: 28.0),
                   alignment: AlignmentDirectional.centerStart,
@@ -110,25 +119,40 @@ class _PricesScreenState extends State<PricesScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(height: 5),
-                                Text('Customer: ' +
+                                Text(AppTranslations.of(context)!
+                                        .text('Customer: ') +
                                     data.docs[index].data().custName),
                                 SizedBox(height: 5),
-                                Text('Date: ' +
-                                    data.docs[index].data().timestamp),
+                                Text(AppTranslations.of(context)!
+                                        .text('Date: ') +
+                                    DateFormat(
+                                            'dd/MM/yyyy, hh:mm a',
+                                            Localizations.localeOf(context)
+                                                .languageCode)
+                                        .format(
+                                            DateFormat('dd/MM/yyyy, hh:mm a')
+                                                .parse(data.docs[index]
+                                                    .data()
+                                                    .timestamp))),
                                 SizedBox(height: 5),
-                                Text('Vendor: ' +
+                                Text(AppTranslations.of(context)!
+                                        .text('Vendor: ') +
                                     data.docs[index].data().vendorName),
                                 SizedBox(height: 5),
-                                Text('Category: ' +
+                                Text(AppTranslations.of(context)!
+                                        .text('Category: ') +
                                     data.docs[index].data().catName),
                                 SizedBox(height: 5),
-                                Text('Sub Category: ' +
+                                Text(AppTranslations.of(context)!
+                                        .text('Sub Category: ') +
                                     data.docs[index].data().subCatName),
                                 SizedBox(height: 5),
-                                Text('Amount: ' +
+                                Text(AppTranslations.of(context)!
+                                        .text('Amount: ') +
                                     data.docs[index].data().price.toString()),
                                 SizedBox(height: 5),
-                                Text('Currency: ' +
+                                Text(AppTranslations.of(context)!
+                                        .text('Currency: ') +
                                     data.docs[index]
                                         .data()
                                         .currencyName

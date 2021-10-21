@@ -2,9 +2,11 @@ import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/order_model.dart';
 import 'package:card_app_admin/screens/admin/orders/order_details_screen.dart';
+import 'package:card_app_admin/utils/in_app_translation.dart';
 import 'package:card_app_admin/utils/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class OrdersScreen extends StatefulWidget {
   const OrdersScreen({Key? key}) : super(key: key);
@@ -25,7 +27,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Orders'),
+        title: Text(AppTranslations.of(context)!.text('Orders')),
         actions: [
           IconButton(
               onPressed: () {
@@ -55,7 +57,8 @@ class _OrdersScreenState extends State<OrdersScreen> {
 
           if (data.size == 0) {
             return Center(
-              child: Text(StringConstant.no_data_found),
+              child: Text(AppTranslations.of(context)!
+                  .text(StringConstant.no_data_found)),
             );
           }
 
@@ -83,13 +86,23 @@ class _OrdersScreenState extends State<OrdersScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SizedBox(height: 5),
-                              Text('Order By: ' +
+                              Text(AppTranslations.of(context)!
+                                      .text('Order By: ') +
                                   data.docs[index].data().custName),
                               SizedBox(height: 5),
-                              Text('Order Date: ' +
-                                  data.docs[index].data().transactionDateTime),
+                              Text(AppTranslations.of(context)!
+                                      .text('Order Date: ') +
+                                  DateFormat(
+                                          'dd/MM/yyyy, hh:mm a',
+                                          Localizations.localeOf(context)
+                                              .languageCode)
+                                      .format(DateFormat('dd/MM/yyyy, hh:mm a')
+                                          .parse(data.docs[index]
+                                              .data()
+                                              .transactionDateTime))),
                               SizedBox(height: 5),
-                              Text('Amount: ' +
+                              Text(AppTranslations.of(context)!
+                                      .text('Amount: ') +
                                   data.docs[index].data().amount.toString()),
                             ]),
                       )),
