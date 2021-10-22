@@ -6,6 +6,7 @@ INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main
 INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-43:12
 MERGED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-43:12
 MERGED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-19:12
 MERGED from [:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
@@ -15,14 +16,15 @@ MERGED from [:flutter_plugin_android_lifecycle] /Users/dreamworld/Desktop/WorkSp
 MERGED from [:shared_preferences] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:sqflite] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:path_provider] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:permission_handler] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.multidex:multidex:2.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3be460a2d5db39581213aa88fbf021a7/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/4e22c4f1a5b69035fafd52b63393a92b/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-analytics:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/e013d5982adc2439c4e25cf17190fe54/jetified-firebase-analytics-19.0.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:17:1-83:12
 MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/55bddf600f44eb86ecf8a50f68a898b7/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta01] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/8a5755e2d94931f752bc32934a24c2c6/jetified-firebase-appcheck-interop-16.0.0-beta01/AndroidManifest.xml:15:1-26:12
@@ -34,7 +36,14 @@ MERGED from [com.google.firebase:firebase-database-collection:18.0.0] /Users/dre
 MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7b7491511acf0dc32a46e0a79efd38fe/jetified-play-services-base-17.1.0/AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.firebase:firebase-installations-interop:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/1ed202fc00ca601db11be28f99754725/jetified-firebase-installations-interop-17.0.0/AndroidManifest.xml:15:1-23:12
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/338fea35d242b8d59d4bd6c4d202d1e1/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-measurement-connector:18.0.2] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/2764560b495dccfde6bcc89a59cdfff4/jetified-firebase-measurement-connector-18.0.2/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:17:1-46:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/24edc8570defa1c06fa8388175b20a3e/jetified-play-services-measurement-sdk-19.0.1/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/24bf024ea42f757e8a75cb41c72f8726/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-measurement-base:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee8500de424cd5c5959fa84a2fbe8fe6/jetified-play-services-measurement-base-19.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/293c01198bcb8895b39c57b08f3d9893/jetified-play-services-stats-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5bcef373022865ed101ea14fb56a341b/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-basement:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/dbb613ff3ecb4330ec9802165d4c8ea6/jetified-play-services-basement-17.1.0/AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/882b25b80575844c0826db7f83989547/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.browser:browser:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/c439532aad3606a4c5f8250467bba3d2/browser-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -58,13 +67,13 @@ MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/dreamworld/.
 MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:15:1-41:12
 MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/df8b75e2647285065a23e69c1c769499/jetified-transport-api-3.0.0/AndroidManifest.xml:15:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/1db5e5931d99d7e05de92f2a1f1a5ecd/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/95d43740af795ce0b2de304d39855f3f/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3fdefe6a1c028306558c66961fa04104/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/95d43740af795ce0b2de304d39855f3f/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/1b806398c041dbceef8deb7286b49539/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/05e36714a5551ddb324e0fd692a5e3b1/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/e694103f1d1d838fbd43965612dc1abf/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/406e8ccc06a0b30814e60147f79808aa/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/2ca444cf6a95bb220ce74353f637a9ec/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/e694103f1d1d838fbd43965612dc1abf/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [io.grpc:grpc-android:1.28.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/40a01cdcf0154a111785dd9a9e619251/jetified-grpc-android-1.28.0/AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/bb63524a2e91fb9112834003150c5cb6/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
 INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debug/AndroidManifest.xml:1:1-7:12
@@ -92,6 +101,8 @@ application
 ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:4:4-42:19
 MERGED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-17:19
+MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-17:19
 MERGED from [:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
@@ -106,12 +117,16 @@ MERGED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-analytics:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/e013d5982adc2439c4e25cf17190fe54/jetified-firebase-analytics-19.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/e013d5982adc2439c4e25cf17190fe54/jetified-firebase-analytics-19.0.1/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:26:5-81:19
 MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:26:5-81:19
 MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:29:5-37:19
 MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:26:5-34:19
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/55bddf600f44eb86ecf8a50f68a898b7/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
@@ -126,8 +141,20 @@ MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld
 MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7b7491511acf0dc32a46e0a79efd38fe/jetified-play-services-base-17.1.0/AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/338fea35d242b8d59d4bd6c4d202d1e1/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/338fea35d242b8d59d4bd6c4d202d1e1/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-measurement-connector:18.0.2] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/2764560b495dccfde6bcc89a59cdfff4/jetified-firebase-measurement-connector-18.0.2/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-measurement-connector:18.0.2] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/2764560b495dccfde6bcc89a59cdfff4/jetified-firebase-measurement-connector-18.0.2/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/24edc8570defa1c06fa8388175b20a3e/jetified-play-services-measurement-sdk-19.0.1/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/24edc8570defa1c06fa8388175b20a3e/jetified-play-services-measurement-sdk-19.0.1/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:28:5-29:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:28:5-29:19
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/24bf024ea42f757e8a75cb41c72f8726/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/24bf024ea42f757e8a75cb41c72f8726/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee8500de424cd5c5959fa84a2fbe8fe6/jetified-play-services-measurement-base-19.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee8500de424cd5c5959fa84a2fbe8fe6/jetified-play-services-measurement-base-19.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/293c01198bcb8895b39c57b08f3d9893/jetified-play-services-stats-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/293c01198bcb8895b39c57b08f3d9893/jetified-play-services-stats-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5bcef373022865ed101ea14fb56a341b/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5bcef373022865ed101ea14fb56a341b/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.android.gms:play-services-basement:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/dbb613ff3ecb4330ec9802165d4c8ea6/jetified-play-services-basement-17.1.0/AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/dbb613ff3ecb4330ec9802165d4c8ea6/jetified-play-services-basement-17.1.0/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/c668a32900e978066835c3285309dabe/core-1.1.0/AndroidManifest.xml:24:5-89
@@ -192,6 +219,8 @@ INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main
 INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml
 MERGED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
@@ -210,8 +239,6 @@ MERGED from [:sqflite] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/sqfli
 MERGED from [:sqflite] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:permission_handler] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:permission_handler] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [androidx.multidex:multidex:2.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3be460a2d5db39581213aa88fbf021a7/multidex-2.0.0/AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3be460a2d5db39581213aa88fbf021a7/multidex-2.0.0/AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:6:5-8:41
@@ -220,12 +247,16 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /User
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/4e22c4f1a5b69035fafd52b63393a92b/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/4e22c4f1a5b69035fafd52b63393a92b/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-analytics:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/e013d5982adc2439c4e25cf17190fe54/jetified-firebase-analytics-19.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/e013d5982adc2439c4e25cf17190fe54/jetified-firebase-analytics-19.0.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/55bddf600f44eb86ecf8a50f68a898b7/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
@@ -248,8 +279,22 @@ MERGED from [com.google.firebase:firebase-installations-interop:17.0.0] /Users/d
 MERGED from [com.google.firebase:firebase-installations-interop:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/1ed202fc00ca601db11be28f99754725/jetified-firebase-installations-interop-17.0.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/338fea35d242b8d59d4bd6c4d202d1e1/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/338fea35d242b8d59d4bd6c4d202d1e1/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:18.0.2] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/2764560b495dccfde6bcc89a59cdfff4/jetified-firebase-measurement-connector-18.0.2/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:18.0.2] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/2764560b495dccfde6bcc89a59cdfff4/jetified-firebase-measurement-connector-18.0.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/24edc8570defa1c06fa8388175b20a3e/jetified-play-services-measurement-sdk-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/24edc8570defa1c06fa8388175b20a3e/jetified-play-services-measurement-sdk-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/24bf024ea42f757e8a75cb41c72f8726/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/24bf024ea42f757e8a75cb41c72f8726/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee8500de424cd5c5959fa84a2fbe8fe6/jetified-play-services-measurement-base-19.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee8500de424cd5c5959fa84a2fbe8fe6/jetified-play-services-measurement-base-19.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/293c01198bcb8895b39c57b08f3d9893/jetified-play-services-stats-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/293c01198bcb8895b39c57b08f3d9893/jetified-play-services-stats-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5bcef373022865ed101ea14fb56a341b/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5bcef373022865ed101ea14fb56a341b/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/dbb613ff3ecb4330ec9802165d4c8ea6/jetified-play-services-basement-17.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/dbb613ff3ecb4330ec9802165d4c8ea6/jetified-play-services-basement-17.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/882b25b80575844c0826db7f83989547/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -296,20 +341,20 @@ MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/dreamw
 MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/df8b75e2647285065a23e69c1c769499/jetified-transport-api-3.0.0/AndroidManifest.xml:18:5-20:41
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/1db5e5931d99d7e05de92f2a1f1a5ecd/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/1db5e5931d99d7e05de92f2a1f1a5ecd/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/95d43740af795ce0b2de304d39855f3f/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/95d43740af795ce0b2de304d39855f3f/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3fdefe6a1c028306558c66961fa04104/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3fdefe6a1c028306558c66961fa04104/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/95d43740af795ce0b2de304d39855f3f/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/95d43740af795ce0b2de304d39855f3f/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/1b806398c041dbceef8deb7286b49539/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/1b806398c041dbceef8deb7286b49539/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/05e36714a5551ddb324e0fd692a5e3b1/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/05e36714a5551ddb324e0fd692a5e3b1/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/e694103f1d1d838fbd43965612dc1abf/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/e694103f1d1d838fbd43965612dc1abf/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/406e8ccc06a0b30814e60147f79808aa/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/406e8ccc06a0b30814e60147f79808aa/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/2ca444cf6a95bb220ce74353f637a9ec/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/2ca444cf6a95bb220ce74353f637a9ec/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/e694103f1d1d838fbd43965612dc1abf/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/e694103f1d1d838fbd43965612dc1abf/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [io.grpc:grpc-android:1.28.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/40a01cdcf0154a111785dd9a9e619251/jetified-grpc-android-1.28.0/AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.28.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/40a01cdcf0154a111785dd9a9e619251/jetified-grpc-android-1.28.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/bb63524a2e91fb9112834003150c5cb6/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
@@ -324,6 +369,8 @@ INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debu
 		INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debug/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
 ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debug/AndroidManifest.xml:6:5-66
+MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-67
+MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-67
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:10:5-67
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:10:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:26:5-67
@@ -334,12 +381,22 @@ MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.g
 MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:27:5-67
 MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:27:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:23:5-67
 	android:name
 		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debug/AndroidManifest.xml:6:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-16:19
+MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-16:19
 MERGED from [:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
@@ -356,6 +413,8 @@ MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.g
 MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:17:9-23:19
 MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:30:9-36:19
 MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:27:9-33:19
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:15:9-21:19
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:15:9-21:19
 MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:33:9-37:35
@@ -374,6 +433,50 @@ ADDED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin
 		ADDED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 	android:name
 		ADDED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-130
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:22:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/40a01cdcf0154a111785dd9a9e619251/jetified-grpc-android-1.28.0/AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/40a01cdcf0154a111785dd9a9e619251/jetified-grpc-android-1.28.0/AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-65
+meta-data#com.google.firebase.components:io.flutter.plugins.firebaseanalytics.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:85
+	android:value
+		ADDED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-82
+	android:name
+		ADDED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-127
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
 ADDED from [:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 	android:value
@@ -420,22 +523,6 @@ ADDED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.
 		ADDED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:20:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:19:17-115
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:25:5-79
-MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:13:5-79
-MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:13:5-79
-MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:26:5-79
-MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:26:5-79
-MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
-MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:22:5-79
-MERGED from [io.grpc:grpc-android:1.28.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/40a01cdcf0154a111785dd9a9e619251/jetified-grpc-android-1.28.0/AndroidManifest.xml:11:5-79
-MERGED from [io.grpc:grpc-android:1.28.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/40a01cdcf0154a111785dd9a9e619251/jetified-grpc-android-1.28.0/AndroidManifest.xml:11:5-79
-	android:name
-		ADDED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:25:22-76
 service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
 ADDED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:36:9-38:40
@@ -530,6 +617,12 @@ ADDED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.grad
 		ADDED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:35:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:34:17-107
+meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
+ADDED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:31:17-139
 meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
 ADDED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
 	android:value
@@ -556,6 +649,38 @@ ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/
 		ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7b7491511acf0dc32a46e0a79efd38fe/jetified-play-services-base-17.1.0/AndroidManifest.xml:26:13-72
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7b7491511acf0dc32a46e0a79efd38fe/jetified-play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:26:5-110
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:26:22-107
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:29:9-33:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:31:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:30:13-85
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:35:9-38:40
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:38:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:36:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:39:9-43:72
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:41:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:42:13-37
+	android:permission
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:43:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:40:13-87
 meta-data#com.google.android.gms.version
 ADDED from [com.google.android.gms:play-services-basement:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/dbb613ff3ecb4330ec9802165d4c8ea6/jetified-play-services-basement-17.1.0/AndroidManifest.xml:23:9-25:69
 	android:value
