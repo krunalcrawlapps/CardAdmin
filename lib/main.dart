@@ -16,6 +16,7 @@ Future<void> main() async {
   runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
     await Firebase.initializeApp();
+
     await DatabaseHelper.shared.initDatabase();
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
     runApp(const MyApp());

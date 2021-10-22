@@ -1,18 +1,18 @@
 [
     {
         "merged": "/Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/shared_preferences/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
-        "source": "/Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c8fd1bfddb99a7a7e21faa1397acdb4/core-1.1.0/res/drawable/notification_tile_bg.xml"
+        "source": "/Users/dreamworld/.gradle/caches/transforms-2/files-2.1/c668a32900e978066835c3285309dabe/core-1.1.0/res/drawable/notification_tile_bg.xml"
     },
     {
         "merged": "/Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/shared_preferences/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
-        "source": "/Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c8fd1bfddb99a7a7e21faa1397acdb4/core-1.1.0/res/drawable/notification_icon_background.xml"
+        "source": "/Users/dreamworld/.gradle/caches/transforms-2/files-2.1/c668a32900e978066835c3285309dabe/core-1.1.0/res/drawable/notification_icon_background.xml"
     },
     {
         "merged": "/Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/shared_preferences/intermediates/res/merged/debug/drawable/notification_bg.xml",
-        "source": "/Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c8fd1bfddb99a7a7e21faa1397acdb4/core-1.1.0/res/drawable/notification_bg.xml"
+        "source": "/Users/dreamworld/.gradle/caches/transforms-2/files-2.1/c668a32900e978066835c3285309dabe/core-1.1.0/res/drawable/notification_bg.xml"
     },
     {
         "merged": "/Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/shared_preferences/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
-        "source": "/Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c8fd1bfddb99a7a7e21faa1397acdb4/core-1.1.0/res/drawable/notification_bg_low.xml"
+        "source": "/Users/dreamworld/.gradle/caches/transforms-2/files-2.1/c668a32900e978066835c3285309dabe/core-1.1.0/res/drawable/notification_bg_low.xml"
     }
 ]
