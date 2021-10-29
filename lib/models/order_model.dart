@@ -4,6 +4,7 @@ class OrderModel {
   late String adminId;
   late String custId;
   late String custName;
+  String? custMobile;
   List<dynamic> arrCards = [];
   late bool isDirectCharge;
   late String accountId;
@@ -19,6 +20,7 @@ class OrderModel {
       this.adminId,
       this.custId,
       this.custName,
+      this.custMobile,
       this.isDirectCharge,
       this.accountId,
       this.secAccountId,
@@ -40,6 +42,7 @@ class OrderModel {
     fulfilmentStatus = json['fulfilmentStatus'];
     amount = json['amount'];
     vendorName = json['vendor_name'];
+    custMobile = json["mobile_number"];
     catName = json['category_name'];
   }
 
@@ -48,6 +51,7 @@ class OrderModel {
     data['order_id'] = this.orderId;
     data['transaction_date'] = this.transactionDateTime;
     data['admin_id'] = this.adminId;
+    data["mobile_number"] = this.custMobile;
     data['cust_id'] = this.custId;
     data['cust_name'] = this.custName;
     data['card_ids'] = this.arrCards;

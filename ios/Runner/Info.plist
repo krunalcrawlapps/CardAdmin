@@ -47,5 +47,14 @@
     <string>This app requires read and write permission from the user.</string>
     <key>NSMicrophoneUsageDescription</key>
     <string>This app requires get access to micro phone</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+<string>Allow App use bluetooth?</string>
+<key>NSBluetoothPeripheralUsageDescription</key>
+<string>Allow App use bluetooth?</string>
+<key>UIBackgroundModes</key>
+<array>
+    <string>bluetooth-central</string>
+    <string>bluetooth-peripheral</string>
+</array>
 </dict>
 </plist>

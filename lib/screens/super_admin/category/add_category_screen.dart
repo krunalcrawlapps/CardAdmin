@@ -38,7 +38,6 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     getAllVendor();

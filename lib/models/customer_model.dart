@@ -6,9 +6,10 @@ class CustomerModel {
   late String custAddress;
   late String custPassword;
   late String custEmail;
+  String? mobileNumber;
   late bool isBlock;
 
-  CustomerModel(this.custId, this.custName, this.custBalance, this.adminId,
+  CustomerModel(this.custId, this.custName, this.custBalance, this.adminId,this.mobileNumber,
       this.custAddress, this.custPassword, this.custEmail, this.isBlock);
 
   CustomerModel.fromJson(Map<String, dynamic> json) {
@@ -19,12 +20,14 @@ class CustomerModel {
     custAddress = json['cust_address'];
     custPassword = json['cust_password'];
     custEmail = json['cust_email'];
+    mobileNumber= json["mobile_number"];
     isBlock = json['isBlock'] == null ? false : json['isBlock'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['cust_id'] = this.adminId;
+    data["mobile_number"] = this.mobileNumber;
     data['cust_name'] = this.custName;
     data['cust_balance'] = this.custBalance;
     data['admin_id'] = this.adminId;

@@ -20,6 +20,7 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
   //variables
   final _formKey = GlobalKey<FormState>();
   TextEditingController nameController = TextEditingController();
+  TextEditingController mobileNumberController = TextEditingController();
   TextEditingController addressController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController balanceController = TextEditingController();
@@ -36,6 +37,7 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
     super.initState();
 
     if (widget.customerModel != null) {
+      mobileNumberController.text = widget.customerModel?.mobileNumber ?? "";
       nameController.text = widget.customerModel?.custName ?? '';
       addressController.text = widget.customerModel?.custAddress ?? '';
       emailController.text = widget.customerModel?.custEmail ?? '';
@@ -84,6 +86,19 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
                   validator: RequiredValidator(
                       errorText: AppTranslations.of(context)!
                           .text(StringConstant.enter_address_validation)),
+                ),
+                SizedBox(height: 20),
+                TextFormField(
+                  controller: mobileNumberController,
+                  keyboardType: TextInputType.phone,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText:
+                          AppTranslations.of(context)!.text('Phone Number'),
+                      labelStyle: TextStyle(fontSize: 15)),
+                  validator: RequiredValidator(
+                      errorText: AppTranslations.of(context)!
+                          .text(StringConstant.enterPhoneNumber)),
                 ),
                 SizedBox(height: 20),
                 TextFormField(
@@ -310,6 +325,7 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
             nameController.text,
             double.parse(balanceController.text),
             DatabaseHelper.shared.getLoggedInUserModel()?.adminId ?? '',
+            mobileNumberController.text,
             addressController.text,
             passwordController.text,
             emailController.text,
@@ -345,6 +361,7 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
       model.custName = nameController.text;
       model.custAddress = addressController.text;
       model.custPassword = passwordController.text;
+      model.mobileNumber = mobileNumberController.text;
 
       await DatabaseHelper.shared.updateCustomer(oldPwd, model);
 

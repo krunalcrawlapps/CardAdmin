@@ -24,6 +24,7 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
   //variables
   final _formKey = GlobalKey<FormState>();
   TextEditingController cardNumberController = TextEditingController();
+  TextEditingController serialNumberController = TextEditingController();
   // TextEditingController cardAmountController = TextEditingController();
 
   String? selectedCardVendor;
@@ -43,7 +44,6 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     getAllData();
@@ -75,6 +75,17 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
       }
 
       cardNumberController.text = cardNumber;
+
+      if (widget.cardModel?.serialNumber?.isNotEmpty ?? false) {
+        String serialNumber = "";
+
+        Latin1Decoder latin1Decoder = Latin1Decoder();
+
+        serialNumber = latin1Decoder.convert(
+            base64Decode(widget.cardModel?.serialNumber.toString() ?? ""));
+
+        serialNumberController.text = serialNumber;
+      }
       // cardAmountController.text = widget.cardModel?.amount.toString() ?? '';
     }
     setState(() {
@@ -112,6 +123,25 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
                         MinLengthValidator(14,
                             errorText: AppTranslations.of(context)!.text(
                                 StringConstant.enter_valid_number_validation))
+                      ]),
+                    ),
+                    SizedBox(height: 20),
+                    TextFormField(
+                      controller: serialNumberController,
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: AppTranslations.of(context)!
+                              .text('Serial Number'),
+                          labelStyle: TextStyle(fontSize: 15)),
+                      validator: MultiValidator([
+                        RequiredValidator(
+                            errorText: AppTranslations.of(context)!
+                                .text(StringConstant.enter_serial_validation)),
+                        MinLengthValidator(11,
+                            errorText: AppTranslations.of(context)!.text(
+                                StringConstant
+                                    .enter_valid_serial_number_validation))
                       ]),
                     ),
                     SizedBox(height: 20),
@@ -289,6 +319,8 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
     try {
       Latin1Encoder latin1Encoder = Latin1Encoder();
       Uint8List cardNumber = latin1Encoder.convert(cardNumberController.text);
+      Uint8List serialNumber =
+          latin1Encoder.convert(serialNumberController.text);
       CardModel card = CardModel(
           getRandomId(),
           base64Encode(cardNumber),
@@ -301,6 +333,7 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
           selectedCardVendor ?? '',
           selectedCategory ?? '',
           selectedSubCategory ?? '',
+          base64Encode(serialNumber),
           DateTime.now().millisecondsSinceEpoch);
 
       await DatabaseHelper.shared.addCardData(card);
@@ -345,6 +378,11 @@ class _AddCardsScreenState extends State<AddCardsScreen> {
       Latin1Encoder latin1Encoder = Latin1Encoder();
       Uint8List cardNumber = latin1Encoder.convert(cardNumberController.text);
       model.cardNumber = base64Encode(cardNumber);
+
+      Uint8List serialNumber =
+          latin1Encoder.convert(serialNumberController.text);
+      model.serialNumber = base64Encode(serialNumber);
+
       // model.amount = double.parse(cardAmountController.text);
 
       model.vendorId = vendorId;

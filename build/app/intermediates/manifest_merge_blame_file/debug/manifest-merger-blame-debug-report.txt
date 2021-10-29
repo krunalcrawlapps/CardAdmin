@@ -12,374 +12,383 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debug/AndroidManifest.xml:6:5-66
-14-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debug/AndroidManifest.xml:6:22-64
+14-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:7:4-66
+14-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:7:21-63
 15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 15-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:3:5-80
 15-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:3:22-78
-16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-16-->[:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
-16-->[:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-76
-17    <uses-permission android:name="android.permission.WAKE_LOCK" />
-17-->[:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-68
-17-->[:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-65
-18    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-18-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:26:5-110
-18-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:26:22-107
-19
-20    <application
-20-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:4:4-42:19
-21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/c668a32900e978066835c3285309dabe/core-1.1.0/AndroidManifest.xml:24:18-86
-22        android:debuggable="true"
-23        android:icon="@mipmap/ic_launcher"
-23-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:7:9-43
-24        android:label="OBK Card-Admin"
-24-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:6:9-39
-25        android:requestLegacyExternalStorage="true" >
-25-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:5:9-52
-26        <activity
-26-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:8:9-36:20
-27            android:name="com.abs.cardadmin.MainActivity"
-27-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:9:13-41
-28            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-28-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:12:13-163
-29            android:hardwareAccelerated="true"
-29-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:13:13-47
-30            android:launchMode="singleTop"
-30-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:10:13-43
-31            android:theme="@style/LaunchTheme"
-31-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:11:13-47
-32            android:windowSoftInputMode="adjustResize" >
-32-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:14:13-55
-33
-34            <!--
-35                 Specifies an Android theme to apply to this Activity as soon as
-36                 the Android process has started. This theme is visible to the user
-37                 while the Flutter UI initializes. After that, this theme continues
-38                 to determine the Window background behind the Flutter UI.
-39            -->
-40            <meta-data
-40-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:19:13-22:17
-41                android:name="io.flutter.embedding.android.NormalTheme"
-41-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:20:15-70
-42                android:resource="@style/NormalTheme" />
-42-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:21:15-52
-43            <!--
-44                 Displays an Android View that continues showing the launch screen
-45                 Drawable until Flutter paints its first frame, then this splash
-46                 screen fades out. A splash screen is useful to avoid any visual
-47                 gap between the end of Android's launch screen and the painting of
-48                 Flutter's first frame.
-49            -->
-50            <meta-data
-50-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:28:13-31:17
-51                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-51-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:29:15-79
-52                android:resource="@drawable/launch_background" />
-52-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:30:15-61
-53
-54            <intent-filter>
-54-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:32:13-35:29
-55                <action android:name="android.intent.action.MAIN" />
-55-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:33:17-68
-55-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:33:25-66
+16    <uses-permission android:name="android.permission.BLUETOOTH" />
+16-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:4:5-68
+16-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:4:22-65
+17    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+17-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:5:3-72
+17-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:5:20-69
+18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+18-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:6:3-78
+18-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:6:20-76
+19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+19-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:8:4-78
+19-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:8:21-75
+20    <uses-permission android:name="android.permission.WAKE_LOCK" />
+20-->[:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-68
+20-->[:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-65
+21    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+21-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:26:5-110
+21-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:26:22-107
+22
+23    <application
+23-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:9:4-47:19
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/c668a32900e978066835c3285309dabe/core-1.1.0/AndroidManifest.xml:24:18-86
+25        android:debuggable="true"
+26        android:icon="@mipmap/ic_launcher"
+26-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:12:9-43
+27        android:label="OBK Card-Admin"
+27-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:11:9-39
+28        android:requestLegacyExternalStorage="true" >
+28-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:10:9-52
+29        <activity
+29-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:13:9-41:20
+30            android:name="com.abs.cardadmin.MainActivity"
+30-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:14:13-41
+31            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+31-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:17:13-163
+32            android:hardwareAccelerated="true"
+32-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:18:13-47
+33            android:launchMode="singleTop"
+33-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:15:13-43
+34            android:theme="@style/LaunchTheme"
+34-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:16:13-47
+35            android:windowSoftInputMode="adjustResize" >
+35-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:19:13-55
+36
+37            <!--
+38                 Specifies an Android theme to apply to this Activity as soon as
+39                 the Android process has started. This theme is visible to the user
+40                 while the Flutter UI initializes. After that, this theme continues
+41                 to determine the Window background behind the Flutter UI.
+42            -->
+43            <meta-data
+43-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:24:13-27:17
+44                android:name="io.flutter.embedding.android.NormalTheme"
+44-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:25:15-70
+45                android:resource="@style/NormalTheme" />
+45-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:26:15-52
+46            <!--
+47                 Displays an Android View that continues showing the launch screen
+48                 Drawable until Flutter paints its first frame, then this splash
+49                 screen fades out. A splash screen is useful to avoid any visual
+50                 gap between the end of Android's launch screen and the painting of
+51                 Flutter's first frame.
+52            -->
+53            <meta-data
+53-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:33:13-36:17
+54                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+54-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:34:15-79
+55                android:resource="@drawable/launch_background" />
+55-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:35:15-61
 56
-57                <category android:name="android.intent.category.LAUNCHER" />
-57-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:34:17-76
-57-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:34:27-74
-58            </intent-filter>
-59        </activity>
-60        <!--
-61             Don't delete the meta-data below.
-62             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-63        -->
-64        <meta-data
-64-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:39:9-41:33
-65            android:name="flutterEmbedding"
-65-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:40:13-44
-66            android:value="2" />
-66-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:41:13-30
-67
-68        <service
-68-->[:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-69            android:name="com.google.firebase.components.ComponentDiscoveryService"
-69-->[:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
-70            android:directBootAware="true"
-70-->[com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
-71            android:exported="false" >
-71-->[com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:17:13-37
-72            <meta-data
-72-->[:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-73                android:name="com.google.firebase.components:io.flutter.plugins.firebase.crashlytics.FlutterFirebaseAppRegistrar"
-73-->[:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-130
-74                android:value="com.google.firebase.components.ComponentRegistrar" />
-74-->[:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+57            <intent-filter>
+57-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:37:13-40:29
+58                <action android:name="android.intent.action.MAIN" />
+58-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:38:17-68
+58-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:38:25-66
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:39:17-76
+60-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:39:27-74
+61            </intent-filter>
+62        </activity>
+63        <!--
+64             Don't delete the meta-data below.
+65             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+66        -->
+67        <meta-data
+67-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:44:9-46:33
+68            android:name="flutterEmbedding"
+68-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:45:13-44
+69            android:value="2" />
+69-->/Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:46:13-30
+70
+71        <service
+71-->[:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+72            android:name="com.google.firebase.components.ComponentDiscoveryService"
+72-->[:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+73            android:directBootAware="true"
+73-->[com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+74            android:exported="false" >
+74-->[com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:17:13-37
 75            <meta-data
-75-->[:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:85
-76                android:name="com.google.firebase.components:io.flutter.plugins.firebaseanalytics.FlutterFirebaseAppRegistrar"
-76-->[:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-127
+75-->[:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+76                android:name="com.google.firebase.components:io.flutter.plugins.firebase.crashlytics.FlutterFirebaseAppRegistrar"
+76-->[:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-130
 77                android:value="com.google.firebase.components.ComponentRegistrar" />
-77-->[:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-82
+77-->[:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 78            <meta-data
-78-->[:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-79                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-79-->[:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
+78-->[:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+79                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+79-->[:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-134
 80                android:value="com.google.firebase.components.ComponentRegistrar" />
-80-->[:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+80-->[:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 81            <meta-data
-81-->[:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-82                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
-82-->[:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-126
+81-->[:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:85
+82                android:name="com.google.firebase.components:io.flutter.plugins.firebaseanalytics.FlutterFirebaseAppRegistrar"
+82-->[:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-127
 83                android:value="com.google.firebase.components.ComponentRegistrar" />
-83-->[:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+83-->[:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-82
 84            <meta-data
-84-->[:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-85                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-85-->[:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-134
+84-->[:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+85                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+85-->[:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
 86                android:value="com.google.firebase.components.ComponentRegistrar" />
-86-->[:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+86-->[:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 87            <meta-data
-87-->[:firebase_core] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-88                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-88-->[:firebase_core] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
+87-->[:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+88                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
+88-->[:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-126
 89                android:value="com.google.firebase.components.ComponentRegistrar" />
-89-->[:firebase_core] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+89-->[:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 90            <meta-data
-90-->[com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:18:13-20:85
-91                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
-91-->[com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:19:17-115
+90-->[:firebase_core] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+91                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+91-->[:firebase_core] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
 92                android:value="com.google.firebase.components.ComponentRegistrar" />
-92-->[com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:20:17-82
+92-->[:firebase_core] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 93            <meta-data
-93-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:77:13-79:85
-94                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-94-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:78:17-109
+93-->[com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:18:13-20:85
+94                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+94-->[com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:19:17-115
 95                android:value="com.google.firebase.components.ComponentRegistrar" />
-95-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:79:17-82
+95-->[com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:20:17-82
 96            <meta-data
-96-->[com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:20:13-22:85
-97                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-97-->[com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:21:17-111
+96-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:77:13-79:85
+97                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+97-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:78:17-109
 98                android:value="com.google.firebase.components.ComponentRegistrar" />
-98-->[com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:22:17-82
+98-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:79:17-82
 99            <meta-data
-99-->[com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:33:13-35:85
-100                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-100-->[com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:34:17-107
+99-->[com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:20:13-22:85
+100                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+100-->[com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:21:17-111
 101                android:value="com.google.firebase.components.ComponentRegistrar" />
-101-->[com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:35:17-82
+101-->[com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:22:17-82
 102            <meta-data
-102-->[com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:30:13-32:85
-103                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-103-->[com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:31:17-139
+102-->[com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:33:13-35:85
+103                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+103-->[com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:34:17-107
 104                android:value="com.google.firebase.components.ComponentRegistrar" />
-104-->[com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:32:17-82
+104-->[com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:35:17-82
 105            <meta-data
-105-->[com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
-106                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-106-->[com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
+105-->[com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:30:13-32:85
+106                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+106-->[com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:31:17-139
 107                android:value="com.google.firebase.components.ComponentRegistrar" />
-107-->[com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
-108        </service>
-109
-110        <provider
-110-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-16:20
-111            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-111-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-82
-112            android:authorities="com.abs.cardadmin.flutter.image_provider"
-112-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-74
-113            android:exported="false"
-113-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-37
-114            android:grantUriPermissions="true" >
-114-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-47
-115            <meta-data
-115-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:75
-116                android:name="android.support.FILE_PROVIDER_PATHS"
-116-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-67
-117                android:resource="@xml/flutter_image_picker_file_paths" />
-117-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-72
-118        </provider>
-119
-120        <service
-120-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:29:9-35:19
-121            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-121-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:30:13-103
-122            android:exported="false" >
-122-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:31:13-37
-123            <meta-data
-123-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:32:13-34:39
-124                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-124-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:33:17-94
-125                android:value="cct" />
-125-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:34:17-36
-126        </service>
-127
-128        <activity
-128-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:27:9-44:20
-129            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-129-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:28:13-80
-130            android:excludeFromRecents="true"
-130-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:29:13-46
-131            android:exported="true"
-131-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:30:13-36
-132            android:launchMode="singleTask"
-132-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:31:13-44
-133            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-133-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:32:13-72
-134            <intent-filter>
-134-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:33:13-43:29
-135                <action android:name="android.intent.action.VIEW" />
-135-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:34:17-69
-135-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:34:25-66
-136
-137                <category android:name="android.intent.category.DEFAULT" />
-137-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:17-76
-137-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:27-73
-138                <category android:name="android.intent.category.BROWSABLE" />
-138-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:37:17-78
-138-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:37:27-75
+107-->[com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:32:17-82
+108            <meta-data
+108-->[com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
+109                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+109-->[com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
+111        </service>
+112
+113        <provider
+113-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-16:20
+114            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+114-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-82
+115            android:authorities="com.abs.cardadmin.flutter.image_provider"
+115-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-74
+116            android:exported="false"
+116-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-37
+117            android:grantUriPermissions="true" >
+117-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-47
+118            <meta-data
+118-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:75
+119                android:name="android.support.FILE_PROVIDER_PATHS"
+119-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-67
+120                android:resource="@xml/flutter_image_picker_file_paths" />
+120-->[:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-72
+121        </provider>
+122
+123        <service
+123-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:29:9-35:19
+124            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+124-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:30:13-103
+125            android:exported="false" >
+125-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:31:13-37
+126            <meta-data
+126-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:32:13-34:39
+127                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+127-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:33:17-94
+128                android:value="cct" />
+128-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:34:17-36
+129        </service>
+130
+131        <activity
+131-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:27:9-44:20
+132            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+132-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:28:13-80
+133            android:excludeFromRecents="true"
+133-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:29:13-46
+134            android:exported="true"
+134-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:30:13-36
+135            android:launchMode="singleTask"
+135-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:31:13-44
+136            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+136-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:32:13-72
+137            <intent-filter>
+137-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:33:13-43:29
+138                <action android:name="android.intent.action.VIEW" />
+138-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:34:17-69
+138-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:34:25-66
 139
-140                <data
-140-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:39:17-42:51
-141                    android:host="firebase.auth"
-141-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:40:21-49
-142                    android:path="/"
-142-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:41:21-37
-143                    android:scheme="genericidp" />
-143-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:42:21-48
-144            </intent-filter>
-145        </activity>
-146        <activity
-146-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:45:9-62:20
-147            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-147-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:46:13-79
-148            android:excludeFromRecents="true"
-148-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:47:13-46
-149            android:exported="true"
-149-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:48:13-36
-150            android:launchMode="singleTask"
-150-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:49:13-44
-151            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-151-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:50:13-72
-152            <intent-filter>
-152-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:51:13-61:29
-153                <action android:name="android.intent.action.VIEW" />
-153-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:34:17-69
-153-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:34:25-66
-154
-155                <category android:name="android.intent.category.DEFAULT" />
-155-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:17-76
-155-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:27-73
-156                <category android:name="android.intent.category.BROWSABLE" />
-156-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:37:17-78
-156-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:37:27-75
+140                <category android:name="android.intent.category.DEFAULT" />
+140-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:17-76
+140-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:27-73
+141                <category android:name="android.intent.category.BROWSABLE" />
+141-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:37:17-78
+141-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:37:27-75
+142
+143                <data
+143-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:39:17-42:51
+144                    android:host="firebase.auth"
+144-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:40:21-49
+145                    android:path="/"
+145-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:41:21-37
+146                    android:scheme="genericidp" />
+146-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:42:21-48
+147            </intent-filter>
+148        </activity>
+149        <activity
+149-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:45:9-62:20
+150            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+150-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:46:13-79
+151            android:excludeFromRecents="true"
+151-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:47:13-46
+152            android:exported="true"
+152-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:48:13-36
+153            android:launchMode="singleTask"
+153-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:49:13-44
+154            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+154-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:50:13-72
+155            <intent-filter>
+155-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:51:13-61:29
+156                <action android:name="android.intent.action.VIEW" />
+156-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:34:17-69
+156-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:34:25-66
 157
-158                <data
-158-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:39:17-42:51
-159                    android:host="firebase.auth"
-159-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:40:21-49
-160                    android:path="/"
-160-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:41:21-37
-161                    android:scheme="recaptcha" />
-161-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:42:21-48
-162            </intent-filter>
-163        </activity>
-164
-165        <service
-165-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:64:9-73:19
-166            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
-166-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:65:13-101
-167            android:enabled="true"
-167-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:66:13-35
-168            android:exported="false" >
-168-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:67:13-37
-169            <intent-filter>
-169-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:68:13-72:29
-170                <action android:name="com.google.firebase.auth.api.gms.service.START" />
-170-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:69:17-89
-170-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:69:25-86
-171
-172                <category android:name="android.intent.category.DEFAULT" />
-172-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:17-76
-172-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:27-73
-173            </intent-filter>
-174        </service>
-175
-176        <provider
-176-->[com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
-177            android:name="com.google.firebase.provider.FirebaseInitProvider"
-177-->[com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
-178            android:authorities="com.abs.cardadmin.firebaseinitprovider"
-178-->[com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
-179            android:directBootAware="true"
-179-->[com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
-180            android:exported="false"
-180-->[com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
-181            android:initOrder="100" />
-181-->[com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
-182
-183        <activity
-183-->[com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7b7491511acf0dc32a46e0a79efd38fe/jetified-play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
-184            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-184-->[com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7b7491511acf0dc32a46e0a79efd38fe/jetified-play-services-base-17.1.0/AndroidManifest.xml:24:13-79
-185            android:exported="false"
-185-->[com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7b7491511acf0dc32a46e0a79efd38fe/jetified-play-services-base-17.1.0/AndroidManifest.xml:25:13-37
-186            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-186-->[com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7b7491511acf0dc32a46e0a79efd38fe/jetified-play-services-base-17.1.0/AndroidManifest.xml:26:13-72
-187
-188        <receiver
-188-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:29:9-33:20
-189            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-189-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:30:13-85
-190            android:enabled="true"
-190-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:31:13-35
-191            android:exported="false" >
-191-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:32:13-37
-192        </receiver>
-193
-194        <service
-194-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:35:9-38:40
-195            android:name="com.google.android.gms.measurement.AppMeasurementService"
-195-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:36:13-84
-196            android:enabled="true"
-196-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:37:13-35
-197            android:exported="false" />
-197-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:38:13-37
-198        <service
-198-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:39:9-43:72
-199            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-199-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:40:13-87
-200            android:enabled="true"
-200-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:41:13-35
-201            android:exported="false"
-201-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:42:13-37
-202            android:permission="android.permission.BIND_JOB_SERVICE" />
-202-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:43:13-69
-203
-204        <meta-data
-204-->[com.google.android.gms:play-services-basement:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/dbb613ff3ecb4330ec9802165d4c8ea6/jetified-play-services-basement-17.1.0/AndroidManifest.xml:23:9-25:69
-205            android:name="com.google.android.gms.version"
-205-->[com.google.android.gms:play-services-basement:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/dbb613ff3ecb4330ec9802165d4c8ea6/jetified-play-services-basement-17.1.0/AndroidManifest.xml:24:13-58
-206            android:value="@integer/google_play_services_version" />
-206-->[com.google.android.gms:play-services-basement:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/dbb613ff3ecb4330ec9802165d4c8ea6/jetified-play-services-basement-17.1.0/AndroidManifest.xml:25:13-66
-207
-208        <service
-208-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:26:9-30:19
-209            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-209-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:27:13-117
-210            android:exported="false"
-210-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:28:13-37
-211            android:permission="android.permission.BIND_JOB_SERVICE" >
-211-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:29:13-69
-212        </service>
-213
-214        <receiver
-214-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:32:9-34:40
-215            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-215-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:33:13-132
-216            android:exported="false" />
-216-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:34:13-37
-217    </application>
-218
-219</manifest>
+158                <category android:name="android.intent.category.DEFAULT" />
+158-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:17-76
+158-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:27-73
+159                <category android:name="android.intent.category.BROWSABLE" />
+159-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:37:17-78
+159-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:37:27-75
+160
+161                <data
+161-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:39:17-42:51
+162                    android:host="firebase.auth"
+162-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:40:21-49
+163                    android:path="/"
+163-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:41:21-37
+164                    android:scheme="recaptcha" />
+164-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:42:21-48
+165            </intent-filter>
+166        </activity>
+167
+168        <service
+168-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:64:9-73:19
+169            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+169-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:65:13-101
+170            android:enabled="true"
+170-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:66:13-35
+171            android:exported="false" >
+171-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:67:13-37
+172            <intent-filter>
+172-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:68:13-72:29
+173                <action android:name="com.google.firebase.auth.api.gms.service.START" />
+173-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:69:17-89
+173-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:69:25-86
+174
+175                <category android:name="android.intent.category.DEFAULT" />
+175-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:17-76
+175-->[com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:27-73
+176            </intent-filter>
+177        </service>
+178
+179        <provider
+179-->[com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+180            android:name="com.google.firebase.provider.FirebaseInitProvider"
+180-->[com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+181            android:authorities="com.abs.cardadmin.firebaseinitprovider"
+181-->[com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+182            android:directBootAware="true"
+182-->[com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+183            android:exported="false"
+183-->[com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+184            android:initOrder="100" />
+184-->[com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+185
+186        <activity
+186-->[com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7b7491511acf0dc32a46e0a79efd38fe/jetified-play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+187            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+187-->[com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7b7491511acf0dc32a46e0a79efd38fe/jetified-play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+188            android:exported="false"
+188-->[com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7b7491511acf0dc32a46e0a79efd38fe/jetified-play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+189            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+189-->[com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7b7491511acf0dc32a46e0a79efd38fe/jetified-play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+190
+191        <receiver
+191-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:29:9-33:20
+192            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+192-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:30:13-85
+193            android:enabled="true"
+193-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:31:13-35
+194            android:exported="false" >
+194-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:32:13-37
+195        </receiver>
+196
+197        <service
+197-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:35:9-38:40
+198            android:name="com.google.android.gms.measurement.AppMeasurementService"
+198-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:36:13-84
+199            android:enabled="true"
+199-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:37:13-35
+200            android:exported="false" />
+200-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:38:13-37
+201        <service
+201-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:39:9-43:72
+202            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+202-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:40:13-87
+203            android:enabled="true"
+203-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:41:13-35
+204            android:exported="false"
+204-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:42:13-37
+205            android:permission="android.permission.BIND_JOB_SERVICE" />
+205-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:43:13-69
+206
+207        <meta-data
+207-->[com.google.android.gms:play-services-basement:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/dbb613ff3ecb4330ec9802165d4c8ea6/jetified-play-services-basement-17.1.0/AndroidManifest.xml:23:9-25:69
+208            android:name="com.google.android.gms.version"
+208-->[com.google.android.gms:play-services-basement:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/dbb613ff3ecb4330ec9802165d4c8ea6/jetified-play-services-basement-17.1.0/AndroidManifest.xml:24:13-58
+209            android:value="@integer/google_play_services_version" />
+209-->[com.google.android.gms:play-services-basement:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/dbb613ff3ecb4330ec9802165d4c8ea6/jetified-play-services-basement-17.1.0/AndroidManifest.xml:25:13-66
+210
+211        <service
+211-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:26:9-30:19
+212            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+212-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:27:13-117
+213            android:exported="false"
+213-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:28:13-37
+214            android:permission="android.permission.BIND_JOB_SERVICE" >
+214-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:29:13-69
+215        </service>
+216
+217        <receiver
+217-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:32:9-34:40
+218            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+218-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:33:13-132
+219            android:exported="false" />
+219-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:34:13-37
+220    </application>
+221
+222</manifest>

@@ -164,5 +164,10 @@
     "Sub Category Name":"اسم الفئة الفرعية",
     "Add Category":"إضافة فئة",
     "Add Vendor":"إضافة بائع",
-    "Edit Vendor":"تحرير البائع"
+    "Edit Vendor":"تحرير البائع",
+    "Phone Number":"رقم الهاتف",
+    "Please enter phone number":"الرجاء إدخال رقم الهاتف",
+    "Serial Number":"رقم سري",
+    "Please enter serial number":"الرجاء إدخال الرقم التسلسلي",
+    "Serial number should be 11 digit":"يجب أن يتكون الرقم التسلسلي من 11 رقمًا"
 }

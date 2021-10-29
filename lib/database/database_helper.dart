@@ -242,6 +242,7 @@ class DatabaseHelper {
         'cust_name': cust.custName,
         'cust_balance': cust.custBalance,
         'admin_id': cust.adminId,
+        "mobile_number": cust.mobileNumber,
         'cust_address': cust.custAddress,
         'cust_password': cust.custPassword,
         'cust_email': cust.custEmail,
@@ -291,6 +292,7 @@ class DatabaseHelper {
               .update({
             'cust_name': customer.custName,
             'cust_balance': customer.custBalance,
+            "mobile_number": customer.mobileNumber,
             'cust_address': customer.custAddress,
             'cust_password': customer.custPassword,
           });
@@ -307,6 +309,7 @@ class DatabaseHelper {
             .update({
           'cust_name': customer.custName,
           'cust_balance': customer.custBalance,
+          "mobile_number": customer.mobileNumber,
           'cust_address': customer.custAddress,
         });
       } on FirebaseAuthException catch (error) {
@@ -374,6 +377,7 @@ class DatabaseHelper {
           .set({
         'card_id': card.cardId,
         'card_number': card.cardNumber,
+        'serial_number': card.serialNumber,
         // 'amount': card.amount,
         'card_status': card.cardStatus,
         'admin_id': card.adminId,
@@ -443,6 +447,7 @@ class DatabaseHelper {
           .update({
         //'amount': card.amount,
         'card_number': card.cardNumber,
+        'serial_number': card.serialNumber,
         'vendor_id': card.vendorId,
         'category_id': card.catId,
         'subCatId': card.subCatId,

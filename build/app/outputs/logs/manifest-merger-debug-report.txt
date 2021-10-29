@@ -1,21 +1,22 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-43:12
-INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-43:12
-INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-43:12
-INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-43:12
-MERGED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-43:12
+ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-48:12
+MERGED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-48:12
 MERGED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-19:12
 MERGED from [:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
-MERGED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-19:12
 MERGED from [:flutter_plugin_android_lifecycle] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:shared_preferences] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:sqflite] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:path_provider] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_bluetooth_basic] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/flutter_bluetooth_basic/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.multidex:multidex:2.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3be460a2d5db39581213aa88fbf021a7/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:15:1-38:12
@@ -30,9 +31,9 @@ MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/dreamworld
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta01] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/8a5755e2d94931f752bc32934a24c2c6/jetified-firebase-appcheck-interop-16.0.0-beta01/AndroidManifest.xml:15:1-26:12
 MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:15:1-40:12
 MERGED from [androidx.exifinterface:exifinterface:1.3.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/49073d4837d0ccec6bae8af7b4539133/exifinterface-1.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/92ea81c139360582d788eac648d64837/jetified-firebase-database-collection-18.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/02f1ef2a030fcc2bbac066ae772a1f84/jetified-play-services-auth-api-phone-17.4.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/eb20a8065434a796902917b60fa9ce77/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-database-collection:18.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/92ea81c139360582d788eac648d64837/jetified-firebase-database-collection-18.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7b7491511acf0dc32a46e0a79efd38fe/jetified-play-services-base-17.1.0/AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.firebase:firebase-installations-interop:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/1ed202fc00ca601db11be28f99754725/jetified-firebase-installations-interop-17.0.0/AndroidManifest.xml:15:1-23:12
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/338fea35d242b8d59d4bd6c4d202d1e1/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
@@ -85,11 +86,11 @@ INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debu
 		INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-43:12
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-48:12
 		INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debug/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-43:12
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:1-48:12
 		INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:1:11-69
@@ -97,18 +98,92 @@ uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:3:5-80
 	android:name
 		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:3:22-78
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:4:5-68
+MERGED from [:flutter_bluetooth_basic] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/flutter_bluetooth_basic/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-68
+MERGED from [:flutter_bluetooth_basic] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/flutter_bluetooth_basic/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-68
+	android:name
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:4:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:5:3-72
+MERGED from [:flutter_bluetooth_basic] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/flutter_bluetooth_basic/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-74
+MERGED from [:flutter_bluetooth_basic] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/flutter_bluetooth_basic/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-74
+	android:name
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:5:20-69
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:6:3-78
+MERGED from [:flutter_bluetooth_basic] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/flutter_bluetooth_basic/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-81
+MERGED from [:flutter_bluetooth_basic] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/flutter_bluetooth_basic/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:6:20-76
+uses-permission#android.permission.INTERNET
+ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:7:4-66
+MERGED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:7:4-66
+MERGED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:7:4-66
+MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-67
+MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-67
+MERGED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:10:5-67
+MERGED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:10:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:26:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:27:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:7:21-63
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:8:4-78
+MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
+MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:22:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/40a01cdcf0154a111785dd9a9e619251/jetified-grpc-android-1.28.0/AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/40a01cdcf0154a111785dd9a9e619251/jetified-grpc-android-1.28.0/AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:8:21-75
 application
-ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:4:4-42:19
+ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:9:4-47:19
 MERGED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-17:19
 MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-17:19
 MERGED from [:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-17:19
@@ -164,69 +239,69 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /Users/dr
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/95d43740af795ce0b2de304d39855f3f/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/95d43740af795ce0b2de304d39855f3f/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 	android:requestLegacyExternalStorage
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:5:9-52
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:10:9-52
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/c668a32900e978066835c3285309dabe/core-1.1.0/AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:6:9-39
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:11:9-39
 	android:icon
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:12:9-43
 activity#com.abs.cardadmin.MainActivity
-ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:8:9-36:20
+ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:13:9-41:20
 	android:launchMode
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:10:13-43
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:15:13-43
 	android:hardwareAccelerated
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:13:13-47
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:18:13-47
 	android:windowSoftInputMode
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:14:13-55
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:19:13-55
 	android:configChanges
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:12:13-163
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:17:13-163
 	android:theme
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:11:13-47
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:16:13-47
 	android:name
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:9:13-41
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:14:13-41
 meta-data#io.flutter.embedding.android.NormalTheme
-ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:19:13-22:17
+ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:24:13-27:17
 	android:resource
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:21:15-52
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:26:15-52
 	android:name
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:20:15-70
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:25:15-70
 meta-data#io.flutter.embedding.android.SplashScreenDrawable
-ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:28:13-31:17
+ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:33:13-36:17
 	android:resource
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:30:15-61
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:35:15-61
 	android:name
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:29:15-79
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:34:15-79
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:32:13-35:29
+ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:37:13-40:29
 action#android.intent.action.MAIN
-ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:33:17-68
+ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:38:17-68
 	android:name
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:33:25-66
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:38:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:34:17-76
+ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:39:17-76
 	android:name
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:34:27-74
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:39:27-74
 meta-data#flutterEmbedding
-ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:39:9-41:33
+ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:44:9-46:33
 	android:value
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:41:13-30
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:46:13-30
 	android:name
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:40:13-44
+		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml:45:13-44
 uses-sdk
 INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml
 MERGED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
@@ -239,6 +314,8 @@ MERGED from [:sqflite] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/sqfli
 MERGED from [:sqflite] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_bluetooth_basic] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/flutter_bluetooth_basic/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_bluetooth_basic] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/flutter_bluetooth_basic/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [androidx.multidex:multidex:2.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3be460a2d5db39581213aa88fbf021a7/multidex-2.0.0/AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3be460a2d5db39581213aa88fbf021a7/multidex-2.0.0/AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:6:5-8:41
@@ -267,12 +344,12 @@ MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.grad
 MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/3c079dad8f269bc2ee4148d8f69f16c7/jetified-firebase-common-20.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.exifinterface:exifinterface:1.3.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/49073d4837d0ccec6bae8af7b4539133/exifinterface-1.3.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.exifinterface:exifinterface:1.3.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/49073d4837d0ccec6bae8af7b4539133/exifinterface-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/92ea81c139360582d788eac648d64837/jetified-firebase-database-collection-18.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/92ea81c139360582d788eac648d64837/jetified-firebase-database-collection-18.0.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/02f1ef2a030fcc2bbac066ae772a1f84/jetified-play-services-auth-api-phone-17.4.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/02f1ef2a030fcc2bbac066ae772a1f84/jetified-play-services-auth-api-phone-17.4.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/eb20a8065434a796902917b60fa9ce77/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/eb20a8065434a796902917b60fa9ce77/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-database-collection:18.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/92ea81c139360582d788eac648d64837/jetified-firebase-database-collection-18.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-database-collection:18.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/92ea81c139360582d788eac648d64837/jetified-firebase-database-collection-18.0.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7b7491511acf0dc32a46e0a79efd38fe/jetified-play-services-base-17.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7b7491511acf0dc32a46e0a79efd38fe/jetified-play-services-base-17.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-installations-interop:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/1ed202fc00ca601db11be28f99754725/jetified-firebase-installations-interop-17.0.0/AndroidManifest.xml:19:5-21:41
@@ -367,42 +444,16 @@ INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debu
 	android:minSdkVersion
 		INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debug/AndroidManifest.xml
-uses-permission#android.permission.INTERNET
-ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debug/AndroidManifest.xml:6:5-66
-MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-67
-MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-67
-MERGED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:10:5-67
-MERGED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:10:5-67
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:26:5-67
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:26:5-67
-MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:14:5-67
-MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:14:5-67
-MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:27:5-67
-MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:27:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
-MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:23:5-67
-	android:name
-		ADDED from /Users/dreamworld/Desktop/WorkSpace/CardAdmin/android/app/src/debug/AndroidManifest.xml:6:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-16:19
 MERGED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-16:19
 MERGED from [:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_auth] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_core] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_core] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/66925fdc5290a13fe397d4a72b938f85/jetified-firebase-crashlytics-18.2.1/AndroidManifest.xml:15:9-21:19
@@ -433,32 +484,12 @@ ADDED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin
 		ADDED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 	android:name
 		ADDED from [:firebase_crashlytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_crashlytics/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-130
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/0d8f7c4c3382143e1f0a312ebc4a18a4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:25:5-79
-MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/5cd4645df98db5b98070d73ca1379b59/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:13:5-79
-MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ee15658f3f80718b632c90861788df2e/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:13:5-79
-MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:26:5-79
-MERGED from [com.google.firebase:firebase-storage:20.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/71f7c75b7ddad146396d59ef72af934b/jetified-firebase-storage-20.0.0/AndroidManifest.xml:26:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
-MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/7c5083b64dfadd4d875653ad7b904064/jetified-firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
-MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/13f31ad80cbd6f6dcbca280ca33a9e7d/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/328eea9b39af74d3e78e0f3f3ece0d8d/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/b4c26318c3a4f7e7bdc3244c29ed69cd/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/ccfa8feac5e2ccd29be356d790b19d4a/jetified-transport-runtime-3.0.0/AndroidManifest.xml:22:5-79
-MERGED from [io.grpc:grpc-android:1.28.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/40a01cdcf0154a111785dd9a9e619251/jetified-grpc-android-1.28.0/AndroidManifest.xml:11:5-79
-MERGED from [io.grpc:grpc-android:1.28.0] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/40a01cdcf0154a111785dd9a9e619251/jetified-grpc-android-1.28.0/AndroidManifest.xml:11:5-79
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
+ADDED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-76
+		ADDED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-134
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [:firebase_analytics] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-68
 MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/dreamworld/.gradle/caches/transforms-2/files-2.1/631afd51ee8c7ee29621f35fc1048552/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:24:5-68
@@ -489,12 +520,6 @@ ADDED from [:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/bui
 		ADDED from [:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 	android:name
 		ADDED from [:firebase_storage] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-126
-meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
-ADDED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-	android:value
-		ADDED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
-	android:name
-		ADDED from [:cloud_firestore] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-134
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
 ADDED from [:firebase_core] /Users/dreamworld/Desktop/WorkSpace/CardAdmin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 	android:value

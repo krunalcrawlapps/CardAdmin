@@ -11,6 +11,7 @@ class CardModel {
   late String subCatId;
   late String subCatName;
   late int timestamp;
+  String? serialNumber;
 
   CardModel(
       this.cardId,
@@ -23,11 +24,13 @@ class CardModel {
       this.vendorName,
       this.catName,
       this.subCatName,
+      this.serialNumber,
       this.timestamp);
 
   CardModel.fromJson(Map<String, dynamic> json) {
     cardId = json['card_id'];
     cardNumber = json['card_number'];
+    serialNumber = json["serial_number"];
     // amount = json['amount'];
     cardStatus = json['card_status'];
     adminId = json['admin_id'];
@@ -44,6 +47,7 @@ class CardModel {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['card_id'] = this.adminId;
     data['card_number'] = this.cardNumber;
+    data["serial_number"] = this.serialNumber;
     // data['amount'] = this.amount;
     data['card_status'] = this.cardStatus;
     data['admin_id'] = this.adminId;

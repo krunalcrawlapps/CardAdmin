@@ -1,12 +1,17 @@
 import 'dart:convert';
 
+import 'package:card_app_admin/constant/app_constant.dart';
 import 'package:card_app_admin/database/database_helper.dart';
 import 'package:card_app_admin/models/card_model.dart';
 import 'package:card_app_admin/models/order_model.dart';
 import 'package:card_app_admin/utils/in_app_translation.dart';
+import 'package:card_app_admin/utils/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
+import 'package:esc_pos_utils/esc_pos_utils.dart';
+import 'package:esc_pos_bluetooth/esc_pos_bluetooth.dart';
 
 class OrderDetailsScreen extends StatefulWidget {
   final OrderModel orderModel;
@@ -137,25 +142,167 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
       child: Card(
           child: Padding(
         padding: EdgeInsets.all(5),
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 5),
-              Text(AppTranslations.of(context)!.text('Vendor: ') +
-                  card.vendorName),
-              SizedBox(height: 5),
-              Text(AppTranslations.of(context)!.text('Category: ') +
-                  card.catName),
-              SizedBox(height: 5),
-              Text(AppTranslations.of(context)!.text('Sub Category: ') +
-                  card.subCatName),
-              SizedBox(height: 5),
-              Text(AppTranslations.of(context)!.text('Card Number: ') +
-                  cardNumber),
-              // Text(card.amount.toString()),
-            ]),
+        child: Row(
+          children: [
+            Expanded(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 5),
+                    Text(AppTranslations.of(context)!.text('Vendor: ') +
+                        card.vendorName),
+                    SizedBox(height: 5),
+                    Text(AppTranslations.of(context)!.text('Category: ') +
+                        card.catName),
+                    SizedBox(height: 5),
+                    Text(AppTranslations.of(context)!.text('Sub Category: ') +
+                        card.subCatName),
+                    SizedBox(height: 5),
+                    Text(AppTranslations.of(context)!.text('Card Number: ') +
+                        cardNumber),
+                    // Text(card.amount.toString()),
+                  ]),
+            ),
+            IconButton(
+                onPressed: () async {
+                  try {
+                    PrinterBluetoothManager printerManager =
+                        PrinterBluetoothManager();
+                    printerManager.startScan(Duration(seconds: 10));
+                    PrinterBluetooth? printer;
+                    // store found printers
+                    await showModalBottomSheet(
+                      context: context,
+                      builder: (context) {
+                        return Scaffold(
+                          body: StreamBuilder<List<PrinterBluetooth>>(
+                              stream: printerManager.scanResults,
+                              builder: (context, snapshot) {
+                                return Column(
+                                  children: [
+                                    const SizedBox(height: 20),
+                                    Text(
+                                      "Select Printer",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 22),
+                                    ),
+                                    const SizedBox(height: 30),
+                                    (snapshot.data?.isEmpty ?? true)
+                                        ? Center(
+                                            child: Text(
+                                                StringConstant.no_data_found))
+                                        : Expanded(
+                                            child: ListView.builder(
+                                              itemCount: snapshot.data?.length,
+                                              padding: EdgeInsets.symmetric(
+                                                  horizontal: 15),
+                                              itemBuilder:
+                                                  (BuildContext context,
+                                                      int index) {
+                                                return Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          bottom: 10),
+                                                  child: ListTile(
+                                                    onTap: () {
+                                                      printer =
+                                                          snapshot.data?[index];
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    title: Text(snapshot
+                                                            .data?[index]
+                                                            .name ??
+                                                        "-"),
+                                                    subtitle: Text(snapshot
+                                                            .data?[index]
+                                                            .address ??
+                                                        "-"),
+                                                  ),
+                                                );
+                                              },
+                                            ),
+                                          ),
+                                  ],
+                                );
+                              }),
+                        );
+                      },
+                    );
+                    printerManager.stopScan();
+                    print(printer);
+                    if (printer != null) {
+                      printerManager.selectPrinter(printer!);
+                      List<int> ticket = await testTicket(card);
+                      final PosPrintResult res =
+                          await printerManager.printTicket(ticket);
+
+                      // print('Print result: ${res.msg}');
+                    }
+                  } catch (e) {
+                    showAlert(context, e.toString());
+                  }
+                },
+                icon: Icon(Icons.print))
+          ],
+        ),
       )),
     );
+  }
+
+  Future<List<int>> testTicket(CardModel card) async {
+    // Using default profile
+    final profile = await CapabilityProfile.load();
+    final generator = Generator(PaperSize.mm80, profile);
+    List<int> bytes = [];
+
+    String tranDate = DateFormat(
+            'dd/MM/yyyy, hh:mm a', Localizations.localeOf(context).languageCode)
+        .format(DateFormat('dd/MM/yyyy, hh:mm a')
+            .parse(widget.orderModel.transactionDateTime));
+
+    bytes += generator.text(card.vendorName,
+        styles: PosStyles(
+          bold: true,
+          align: PosAlign.center,
+          height: PosTextSize.size2,
+          width: PosTextSize.size2,
+        ),
+        linesAfter: 1);
+    bytes += generator.text('Card Number: ${card.cardNumber}');
+    bytes += generator.text('Name: ${widget.orderModel.custName}');
+    bytes += generator.text('Tel: ${widget.orderModel.custMobile}');
+    bytes += generator.text('Date Time: $tranDate');
+    bytes +=
+        generator.text('Serial Number: ${card.serialNumber}', linesAfter: 1);
+    bytes += generator.text(
+      card.vendorName,
+      styles: PosStyles(
+        bold: true,
+        align: PosAlign.center,
+        height: PosTextSize.size2,
+        width: PosTextSize.size2,
+      ),
+    );
+    bytes += generator.text(card.subCatName,
+        styles: PosStyles(
+          bold: true,
+          align: PosAlign.center,
+          height: PosTextSize.size2,
+          width: PosTextSize.size2,
+        ),
+        linesAfter: 1);
+    bytes += generator.hr(linesAfter: 1);
+    bytes += generator.text('Denomination : ${widget.orderModel.amount}',
+        linesAfter: 1);
+    bytes += generator.hr();
+    bytes += generator.text('Serial Number: ${card.serialNumber}');
+    bytes += generator.text('Cashier Id: Admin');
+
+    bytes += generator.feed(2);
+    bytes += generator.cut();
+    return bytes;
   }
 }

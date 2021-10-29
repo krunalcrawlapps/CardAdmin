@@ -27,6 +27,7 @@ class StringConstant {
 
   static const enter_name_validation = 'Please enter name';
   static const enter_address_validation = 'Please enter address';
+  static const enterPhoneNumber = 'Please enter phone number';
   static const enter_confirm_pwd_validation = 'Please enter confirm password';
   static const invalid_confirm_pwd_validation =
       'Confirm password should be same as password';
@@ -38,7 +39,10 @@ class StringConstant {
   //cards
   static const cards = 'Cards';
   static const enter_number_validation = 'Please enter card number';
+  static const enter_serial_validation = 'Please enter serial number';
   static const enter_valid_number_validation = 'Card number should be 14 digit';
+  static const enter_valid_serial_number_validation =
+      'Serial number should be 11 digit';
   static const enter_vendor_validation = 'Please select vendor';
   static const enter_amount_validation = 'Please enter card amount';
 
